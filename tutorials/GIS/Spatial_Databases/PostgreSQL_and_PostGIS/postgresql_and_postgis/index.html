@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Install PostgreSQL and PostGIS Databases: - Moustafa Shaaban</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Moustafa Shaaban</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../../resume/" class="nav-link">Resume</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../projects/" class="nav-link">Projects</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../tutorials/" class="nav-link">Tutorials</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#install-postgresql-and-postgis-databases" class="nav-link">Install PostgreSQL and PostGIS Databases:</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#steps" class="nav-link">Steps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#download-postgresql-14-windows-x64" class="nav-link">Download postgresql 14 windows x64:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#install-postgresql" class="nav-link">Install PostgreSQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#install-postgis" class="nav-link">Install PostGIS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="install-postgresql-and-postgis-databases">Install PostgreSQL and PostGIS Databases:</h1>
+<ul>
+<li>In this tutorial we will learn how to install PostgreSQL and PostGIS databases.</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<ul>
+<li>Download postgresql 14 windows x64 execution file</li>
+<li>Install PostgreSQL</li>
+<li>Install PostGIS</li>
+</ul>
+<h2 id="download-postgresql-14-windows-x64">Download postgresql 14 windows x64:</h2>
+<p>Official Website:</p>
+<p><a href="https://www.postgresql.org/download/windows/">PostgreSQL</a></p>
+<ul>
+<li>
+<p>Go to PostgreSQL website download page for windows by clicking on the following link <a href="https://www.postgresql.org/download/windows/">PostgreSQL</a></p>
+</li>
+<li>
+<p>Click on the download the installer:</p>
+</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image0.1.jpg" /></p>
+<ul>
+<li>Click on the Windows x86-64 icon next to the PostgreSQL Version 14.4 to download the file:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image0.2.jpg" /></p>
+<h2 id="install-postgresql">Install PostgreSQL</h2>
+<ul>
+<li>After downloading go to your Downloads folder and double click on the 'postgresql-14.4-1-windows-x64.exe' to run the installer:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image1.jpg" /></p>
+<ul>
+<li>Click Yes when the User Account Control window appear to run the file:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image2.jpg" /></p>
+<ul>
+<li>Click next to start the installation:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image3.jpg" /></p>
+<ul>
+<li>Choose the Installation Directory by clicking on the icon next to it, or click next to choose the default directory, here we will accept the default directory:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image4.jpg" /></p>
+<ul>
+<li>Here we can choose what we want to install, Keep all the options selected and click next:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image5.jpg" /></p>
+<ul>
+<li>Now we can choose where to save our data, We can also click next to choose the default directory:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image6.jpg" /></p>
+<ul>
+<li>We need to choose a password for our postgre admin account, fill a password and retype it again then click Next:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image7.jpg" /></p>
+<p><img alt="PostgreSQL" src="../images/image8.jpg" /></p>
+<ul>
+<li>Here we choose the Port which PostgreSQL will run on, Click Next to keep the default port 5432:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image9.jpg" /></p>
+<ul>
+<li>Click Next to keep the Default Locale:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image10.jpg" /></p>
+<ul>
+<li>A Pre Installation Summary will appear to tell you what will be installed and where, Click Next to confirm:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image11.jpg" /></p>
+<ul>
+<li>Click Next again to start the installation:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image12.jpg" /></p>
+<ul>
+<li>Wait for the installation to finish:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image13.jpg" /></p>
+<ul>
+<li>After the installation is completed make sure that the icon next to Stack Builder is checked to open it and install other options (PostGIS spatial database extension for our example):</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image14.jpg" /></p>
+<h2 id="install-postgis">Install PostGIS</h2>
+<ul>
+<li>
+<p>Now that PostgreSQL database is installed we can use the Stack Builder to install PostGIS spatial database extension.</p>
+</li>
+<li>
+<p>The Stack Builder 4.2.1 window will open after we complete installing PostgreSQL database.</p>
+</li>
+<li>
+<p>Click on the down arrow to select the installed version of PostgreSQL then click Next:</p>
+</li>
+</ul>
+<p><img alt="PostGIS" src="../images/image15.jpg" /></p>
+<p><img alt="PostGIS" src="../images/image16.jpg" /></p>
+<p><img alt="PostGIS" src="../images/image17.jpg" /></p>
+<ul>
+<li>Click on the plus icon next to Spatial Extensions and choose "PostGIS 3.2 Bundle for PostgreSQL 14 (x64 bit: v3.2.1", then click Next:</li>
+</ul>
+<p><img alt="PostGIS" src="../images/image18.jpg" /></p>
+<p><img alt="PostGIS" src="../images/image19.jpg" /></p>
+<p><img alt="PostGIS" src="../images/image20.jpg" /></p>
+<p><img alt="PostGIS" src="../images/image21.jpg" /></p>
+<p><img alt="PostGIS" src="../images/image22.jpg" /></p>
+<ul>
+<li>Click Next to choose the default download directory and wait for the download process to complete:</li>
+</ul>
+<p><img alt="GADM" src="../images/image23.jpg" /></p>
+<p><img alt="GADM" src="../images/image24.jpg" /></p>
+<ul>
+<li>Click Next to start installing PostGIS (make sure to leave the Skip Installation option unchecked):</li>
+</ul>
+<p><img alt="GADM" src="../images/image25.jpg" /></p>
+<p><img alt="GADM" src="../images/image26.jpg" /></p>
+<ul>
+<li>The PostGIS 3.2 Bundle for PostgreSQL 14 Setup window will open, Click on I Agree to start installing PostGIS:</li>
+</ul>
+<p><img alt="GADM" src="../images/image27.jpg" /></p>
+<ul>
+<li>Click Next. (No need to check the checkbox to Create a spatial databse because we are going to use pgAdmin to create a PostGIS spatial database in the next tutorial)</li>
+</ul>
+<p><img alt="GADM" src="../images/image28.jpg" /></p>
+<ul>
+<li>Click Next to keep the default Destination folder:</li>
+</ul>
+<p><img alt="GADM" src="../images/image29.jpg" /></p>
+<ul>
+<li>Now, we need to click Yes to register the PROJ_LIB, GDAL_DATA, POSTGIS_ENABLED_DRIVERS and POSTGIS_ENABLED_OUTDB_RASTERS environment variables:</li>
+</ul>
+<p><img alt="GADM" src="../images/image30.jpg" /></p>
+<p><img alt="GADM" src="../images/image31.jpg" /></p>
+<p><img alt="GADM" src="../images/image32.jpg" /></p>
+<p><img alt="GADM" src="../images/image33.jpg" /></p>
+<ul>
+<li>Once the installation is complete, Click on Close then cilck on Finish to complete the installation process</li>
+</ul>
+<p><img alt="GADM" src="../images/image34.jpg" /></p>
+<p><img alt="GADM" src="../images/image35.jpg" /></p>
+<ul>
+<li>
+<p>That's it for today's tutorial. We just installed PostgreSQL database and PostGIS spatial database extension.</p>
+</li>
+<li>
+<p>In the next tutorial, we will learn how to create a PostGIS spatial database using pgAdmin 4 and how to connect to it using QGIS and how to add data inside it and Query this data using SQL.</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js" defer></script>
+        <script src="../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

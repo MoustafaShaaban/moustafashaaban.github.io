@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Create a Spatialite Database and Insert Data to it - Moustafa Shaaban</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Moustafa Shaaban</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../../resume/" class="nav-link">Resume</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../projects/" class="nav-link">Projects</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../tutorials/" class="nav-link">Tutorials</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#create-a-spatialite-database-and-insert-data-to-it" class="nav-link">Create a Spatialite Database and Insert Data to it</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#steps" class="nav-link">Steps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#download-the-required-data" class="nav-link">Download the required data:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#load-the-data-to-qgis" class="nav-link">Load the data to QGIS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-a-table-join-between-using-join-attributes-by-field-values-algorithm" class="nav-link">Create a table join between using (Join Attributes by Field Values) algorithm</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-a-spatialite-database-and-connect-to-it-using-qgis-db-manager" class="nav-link">Create a Spatialite database and connect to it using QGIS DB Manager</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#insert-data-into-the-database" class="nav-link">Insert data into the database</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#run-basic-sql-queries-on-the-database" class="nav-link">Run basic SQL queries on the database</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="create-a-spatialite-database-and-insert-data-to-it">Create a Spatialite Database and Insert Data to it</h1>
+<ul>
+<li>In this tutorial we will learn how to create a spatialite database and how to insert data to it.</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<ul>
+<li>Download the required data</li>
+<li>Load the data to QGIS</li>
+<li>Create a table join between using (Join Attributes by Field Values) algorithm</li>
+<li>Create a Spatialite database and connect to it using QGIS DB Manager</li>
+<li>Insert data into the database</li>
+<li>Run basic SQL queries on the database</li>
+</ul>
+<h2 id="download-the-required-data">Download the required data:</h2>
+<p>Data Sources:</p>
+<p><a href="https://gadm.org/download_country.html">GADM</a></p>
+<p><a href="https://worldpopulationreview.com/states">World Population Review</a></p>
+<ul>
+<li>First go to GADM website by clicking on the following link <a href="https://gadm.org/download_country.html">GADM</a>
+and from the Country drop down menu choose United States.
+Then click on Shapefile to download it:</li>
+</ul>
+<p><img alt="GADM" src="../images/image1.jpg" /></p>
+<p><img alt="GADM" src="../images/image2.jpg" /></p>
+<p><img alt="GADM" src="../images/image3.jpg" /></p>
+<ul>
+<li>Go to <a href="https://worldpopulationreview.com/states">World Population Review</a> website and download the csv files containing the population data of us states.</li>
+</ul>
+<p><img alt="GADM" src="../images/worldpop2.PNG" /></p>
+<p><img alt="GADM" src="../images/worldpop.PNG" /></p>
+<ul>
+<li>
+<p>We will need to download two files the 'US states - Ranked by Population 2022.csv' and the 'District of Columbia and Puerto Rico.csv'.</p>
+</li>
+<li>
+<p>After that we can open both files in microsoft excel or we can use a free software called <a href="https://www.onlyoffice.com/download-desktop.aspx">Only Office</a> to copy the data of District of Columbia to the 'US states - Ranked by Population 2022.csv'.</p>
+</li>
+</ul>
+<h2 id="load-the-data-to-qgis">Load the data to QGIS</h2>
+<ul>
+<li>Open a new project in QGIS software and add the 'gadm41_USA_1.shp' data file.</li>
+</ul>
+<p><img alt="GADM" src="../images/image4.jpg" /></p>
+<p><img alt="GADM" src="../images/image5.jpg" /></p>
+<p><img alt="GADM" src="../images/image6.jpg" /></p>
+<p><img alt="GADM" src="../images/image7.jpg" /></p>
+<p><img alt="GADM" src="../images/image8.jpg" /></p>
+<p><img alt="GADM" src="../images/image9.jpg" /></p>
+<ul>
+<li>Now, let's explore the attribute table of the new layer to see its content.</li>
+</ul>
+<p><img alt="GADM" src="../images/image10.jpg" /></p>
+<p><img alt="GADM" src="../images/image11.jpg" /></p>
+<ul>
+<li>
+<p>As we can see from the picture above the us states are inside a field called 'Name_1'. We will use this name later in the tutorial.</p>
+</li>
+<li>
+<p>Now, let's add the second data file. Click on the Layer menu and choose 'Add Delimited Text Layer' option. A new window will appear, click on the icon nexxt to the File name to choose the 'US states - Ranked by Population 2022.csv' file:</p>
+</li>
+</ul>
+<p><img alt="GADM" src="../images/image12.jpg" /></p>
+<p><img alt="GADM" src="../images/image13.jpg" /></p>
+<p><img alt="GADM" src="../images/image14.jpg" /></p>
+<p><img alt="GADM" src="../images/image15.jpg" /></p>
+<p><img alt="GADM" src="../images/image16.jpg" /></p>
+<ul>
+<li>Also, In the Geometry Definition make sure to choose the 'No geometry (attribute only table)' option. Then click Add.</li>
+</ul>
+<p><img alt="GADM" src="../images/image17.jpg" /></p>
+<p><img alt="GADM" src="../images/image18.jpg" /></p>
+<p><img alt="GADM" src="../images/image19.jpg" /></p>
+<ul>
+<li>A new layer is added to the Layers panel.</li>
+</ul>
+<h2 id="create-a-table-join-between-using-join-attributes-by-field-values-algorithm">Create a table join between using (Join Attributes by Field Values) algorithm</h2>
+<ul>
+<li>
+<p>From the QGIS toolbar click on Processing menu and choose Toolbox.</p>
+</li>
+<li>
+<p>In the Processing Toolbox search bar type 'table join' and double click on 'Join attributes by field value' under the Vector general tools to open it.</p>
+</li>
+</ul>
+<p><img alt="GADM" src="../images/image20.jpg" /></p>
+<p><img alt="GADM" src="../images/image21.jpg" /></p>
+<p><img alt="GADM" src="../images/image22.jpg" /></p>
+<ul>
+<li>The Join Attributes by Field Value window will appear. In the Input layer option choose the 'gadm41_USA_1' layer. And in the Table field option choose 'Name_1':</li>
+</ul>
+<p><img alt="GADM" src="../images/image23.jpg" /></p>
+<p><img alt="GADM" src="../images/image24.jpg" /></p>
+<p><img alt="GADM" src="../images/image25.jpg" /></p>
+<p><img alt="GADM" src="../images/image26.jpg" /></p>
+<ul>
+<li>In the Input layer 2 option make sure it has our second layer 'US states - Ranked by Population 2022' and then, click on the Table field 2 to choose the field that contains the US States 'State'</li>
+</ul>
+<p><img alt="GADM" src="../images/image27.jpg" /></p>
+<p><img alt="GADM" src="../images/image28.jpg" /></p>
+<ul>
+<li>Click on the button next to the 'Layer 2 fields to copy (leave empty to copy all fields) optional' to choose the fields we want to join in our case we need 3 fields (Pop, Pop2021, Pop2010) click on the checkboxes next to those fields. Then click on the blue back arrow to go back to the Join Attributes by Field Value window</li>
+</ul>
+<p><img alt="GADM" src="../images/image29.jpg" /></p>
+<p><img alt="GADM" src="../images/image30.jpg" /></p>
+<ul>
+<li>Scroll down to the Joined layer option and click on the button next to it and choose Save to File to save the new joined layer to a shape file. Choose a name to the new layer (like us_state_pop.shp) abd a location of the new file (like on the Desktop).</li>
+</ul>
+<p><img alt="GADM" src="../images/image31.jpg" /></p>
+<p><img alt="GADM" src="../images/image32.jpg" /></p>
+<p><img alt="GADM" src="../images/image33.jpg" /></p>
+<p><img alt="GADM" src="../images/image34.jpg" /></p>
+<p><img alt="GADM" src="../images/image35.jpg" /></p>
+<ul>
+<li>Now, click on Run to run the algorithm.</li>
+</ul>
+<p><img alt="GADM" src="../images/image36.jpg" /></p>
+<p><img alt="GADM" src="../images/image37.jpg" /></p>
+<p><img alt="GADM" src="../images/image38.jpg" /></p>
+<ul>
+<li>The new layer is added, let's see its attribute table to see the new fields</li>
+</ul>
+<p><img alt="GADM" src="../images/image39.jpg" /></p>
+<p><img alt="GADM" src="../images/image40.jpg" /></p>
+<p><img alt="GADM" src="../images/image41.jpg" /></p>
+<ul>
+<li>As we can see in the screen above, there are 3 new fields (Pop, Pop2021m Pop2010) added to the main layer.</li>
+</ul>
+<h2 id="create-a-spatialite-database-and-connect-to-it-using-qgis-db-manager">Create a Spatialite database and connect to it using QGIS DB Manager</h2>
+<ul>
+<li>In the QGIS Browser panel rigth click on SpatiaLite and choose Create Database, a new window will appear. Choose a location to save the database and database name (like us_states_pop) then click on save.</li>
+</ul>
+<p><img alt="GADM" src="../images/image42.jpg" /></p>
+<p><img alt="GADM" src="../images/image43.jpg" /></p>
+<p><img alt="GADM" src="../images/image44.jpg" /></p>
+<p><img alt="GADM" src="../images/image45.jpg" /></p>
+<ul>
+<li>Now, let's connect to our newly created database. In the QGIS toolbar open Database &gt; DB Manager</li>
+</ul>
+<p><img alt="GADM" src="../images/image46.jpg" /></p>
+<p><img alt="GADM" src="../images/image47.jpg" /></p>
+<ul>
+<li>The Database Manager window will open. From the Providers panel expand SpatiaLite &gt; us_states_pop to connect to the database.</li>
+</ul>
+<p><img alt="GADM" src="../images/image48.jpg" /></p>
+<p><img alt="GADM" src="../images/image49.jpg" /></p>
+<h2 id="insert-data-into-the-database">Insert data into the database</h2>
+<ul>
+<li>From the Datebase Manager window click on the 'Import Layer File' button to insert a layer file to the database.</li>
+</ul>
+<p><img alt="GADM" src="../images/image50.jpg" /></p>
+<ul>
+<li>
+<p>A new window will appear, Make sure that 'us_state_pop' layer is selected in the Input option, and click on the checkboxes next to Primary Key and Create spatial index options to activate them. </p>
+</li>
+<li>
+<p>The Primary Key option creates a new unique key to each record of the database, we can call the field whatever we like, but in this tutorial I will choose the default value 'id'.</p>
+</li>
+<li>
+<p>The Create spatial index option, is used with spatial data to imorive the queries time.</p>
+</li>
+<li>
+<p>Finally click Ok to load the data.</p>
+</li>
+</ul>
+<p><img alt="GADM" src="../images/image51.jpg" /></p>
+<p><img alt="GADM" src="../images/image52.jpg" /></p>
+<p><img alt="GADM" src="../images/image53.jpg" /></p>
+<ul>
+<li>A new table called us_state_pop is added to our database. Click on the Table tab to see its data.</li>
+</ul>
+<p><img alt="GADM" src="../images/image54.jpg" /></p>
+<p><img alt="GADM" src="../images/image55.jpg" /></p>
+<h2 id="run-basic-sql-queries-on-the-database">Run basic SQL queries on the database</h2>
+<ul>
+<li>In the DB Manager window, click on the SQL Window, to open the SQL Query window</li>
+</ul>
+<p><img alt="GADM" src="../images/image56.jpg" /></p>
+<p><img alt="GADM" src="../images/image57.jpg" /></p>
+<ul>
+<li>Let's write a SQL query to retrive a record about New York city</li>
+</ul>
+<p>select * from us_state_pop where Name_1 = "New York";</p>
+<ul>
+<li>Next, click on Execute to run the query</li>
+</ul>
+<p><img alt="GADM" src="../images/image58.jpg" /></p>
+<ul>
+<li>Here is the result:</li>
+</ul>
+<p><img alt="GADM" src="../images/image59.jpg" /></p>
+<ul>
+<li>Another example, let's say we want to retrieve the name and population of all the states that have more than 10 million population.
+  select Name_1, Pop from us_state_pop where Pop &gt; 10000000;</li>
+</ul>
+<p><img alt="GADM" src="../images/image60.jpg" /></p>
+<ul>
+<li>
+<p>And that's it for today's tutorial. We can see how easy it is to create, manage and query spatial databases using QGIS.</p>
+</li>
+<li>
+<p>In a later tutorial, we will learn how to create a PostGIS database and query it's content.</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js" defer></script>
+        <script src="../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

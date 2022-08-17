@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Creating an Anconda Environment amd Installing ArcGIS Python API: - Moustafa Shaaban</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Moustafa Shaaban</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../resume/" class="nav-link">Resume</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../projects/" class="nav-link">Projects</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../tutorials/" class="nav-link">Tutorials</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#creating-an-anconda-environment-amd-installing-arcgis-python-api" class="nav-link">Creating an Anconda Environment amd Installing ArcGIS Python API:</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#steps" class="nav-link">Steps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#create-conda-environment-using-the-gui-tool-anaconda-navigator" class="nav-link">Create Conda Environment using the GUI tool Anaconda Navigator:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#activating-the-newly-created-conda-environment-using-anaconda-powershell-prompt" class="nav-link">Activating the newly created conda environment using Anaconda Powershell Prompt:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#install-arcgis-python-api-using-pip" class="nav-link">Install ArcGIS Python API using pip:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#external-links-in-this-tutorial" class="nav-link">External Links in this Tutorial:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="creating-an-anconda-environment-amd-installing-arcgis-python-api">Creating an Anconda Environment amd Installing ArcGIS Python API:</h1>
+<ul>
+<li>
+<p>This is the third tutorial in setting a Python development enviroment and tools in our system. You can find the previous parts here:</p>
+</li>
+<li>
+<p><a href="../../1-Installing_Python/python/">Install Python 3.9.0</a></p>
+</li>
+<li>
+<p><a href="../../2-Installing_Anaconda/anaconda/">Install Anaconda Distribution</a> </p>
+</li>
+<li>
+<p>In this tutorial we will learn how to create an Anaconda virtual environment and install ArcGIS Python API inside it.</p>
+</li>
+<li>
+<p>In Python, you can think of virtual environments as boxes where you will install each project dependencies inside it. This is the recommended way to create Python projects.</p>
+</li>
+<li>
+<p>You can learn more about Python Virtual Environments in the <a href="https://docs.python.org/3/library/venv.html">Python Docs</a> website.</p>
+</li>
+<li>
+<p>There are many tools to create Python Virtual Environments like (there are other tools but these are some of the popular ones):</p>
+</li>
+<li>
+<p>The built-in tool in Python called <a href="https://docs.python.org/3/library/venv.html">venv</a></p>
+</li>
+<li>
+<p><a href="https://pipenv.pypa.io/en/latest/">Pipenv</a></p>
+</li>
+<li>
+<p><a href="https://virtualenvwrapper.readthedocs.io/en/latest/">virtualenvwrapper</a></p>
+</li>
+<li>
+<p>And the one we are going to use in this tutorial <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">Conda Environments</a></p>
+</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<ul>
+<li>Create Conda Environment using the GUI tool Anaconda Navigator.</li>
+<li>Activating the newly created conda environment using Anaconda Powershell Prompt.</li>
+<li>Install ArcGIS Python API using pip.</li>
+</ul>
+<h1 id="create-conda-environment-using-the-gui-tool-anaconda-navigator">Create Conda Environment using the GUI tool Anaconda Navigator:</h1>
+<ul>
+<li>First, open your start menu and search for Anaconda Navigator and open it:</li>
+</ul>
+<p><img alt="Anaconda Distribution" src="../images/image1.jpg" /></p>
+<p><img alt="Anaconda Distribution" src="../images/image2.jpg" /></p>
+<ul>
+<li>The Anaconda Navigator window will open. Click on Environments to see the available conda environments:</li>
+</ul>
+<p><img alt="Anaconda Distribution" src="../images/image3.jpg" /></p>
+<p><img alt="Anaconda Distribution" src="../images/image4.jpg" /></p>
+<p><img alt="Anaconda Distribution" src="../images/image5.jpg" /></p>
+<ul>
+<li>At the bottom of the screen click on the Create button to add a new conda environment:</li>
+</ul>
+<p><img alt="Anaconda Distribution" src="../images/image5.jpg" /></p>
+<p><img alt="Anaconda Distribution" src="../images/image6.jpg" /></p>
+<ul>
+<li>
+<p>Choose a name for the environment and it will automatically choose Python Packages and Version.</p>
+</li>
+<li>
+<p>Click on Create, then wait for the task to complete:</p>
+</li>
+</ul>
+<p><img alt="Anaconda Distribution" src="../images/image7.jpg" /></p>
+<p><img alt="Anaconda Distribution" src="../images/image8.jpg" /></p>
+<ul>
+<li>You will see a new environment added to the list:</li>
+</ul>
+<p><img alt="Anaconda Distribution" src="../images/image9.jpg" /></p>
+<h1 id="activating-the-newly-created-conda-environment-using-anaconda-powershell-prompt">Activating the newly created conda environment using Anaconda Powershell Prompt:</h1>
+<ul>
+<li>
+<p>Now that our conda environment is created, we need to activate it.</p>
+</li>
+<li>
+<p>Open your start menu and search for Anaconda Powershell Prompt and open it:</p>
+</li>
+</ul>
+<p><img alt="Anaconda Distribution" src="../images/image10.jpg" /></p>
+<p><img alt="Anaconda Distribution" src="../images/image11.jpg" /></p>
+<p><img alt="Anaconda Distribution" src="../images/image12.jpg" /></p>
+<ul>
+<li>
+<p>An Anaconda Powershell window will appear.</p>
+</li>
+<li>
+<p>You will notice that the (base) conda environment is curruntly active. We do not want that. So type the following command and click Enter to activate the required env:</p>
+<p>conda activate ArcGIS_Python_API</p>
+</li>
+</ul>
+<p><img alt="Anaconda Distribution" src="../images/image13.jpg" /></p>
+<p><img alt="Anaconda Distribution" src="../images/image14.jpg" /></p>
+<p><img alt="Anaconda Distribution" src="../images/image15.jpg" /></p>
+<ul>
+<li>Now you will see that the (ArcGIS_Python_API) environment is active:</li>
+</ul>
+<p><img alt="Anaconda Distribution" src="../images/image16.jpg" /></p>
+<ul>
+<li>And we are ready for the final step.</li>
+</ul>
+<h1 id="install-arcgis-python-api-using-pip">Install ArcGIS Python API using pip:</h1>
+<ul>
+<li>
+<p>After activating the required environment all we need is to type one single command which is:</p>
+<p>pip install arcgis</p>
+</li>
+</ul>
+<p><img alt="Anaconda Distribution" src="../images/image17.jpg" /></p>
+<ul>
+<li>
+<p>Wait until the command finish and make sure that there are no errors appears.</p>
+</li>
+<li>
+<p>And that is it for our tutorial. In the next tutorial we will learn how to install Microsoft VS Code and add some of the recommended extensions to it.</p>
+</li>
+<li>
+<p>You can find this tutorial <a href="../../4-Install_VS_Code/vs_code/">here</a></p>
+</li>
+</ul>
+<h1 id="external-links-in-this-tutorial">External Links in this Tutorial:</h1>
+<ul>
+<li>
+<p><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">Conda Environments</a></p>
+</li>
+<li>
+<p><a href="https://developers.arcgis.com/python/guide/install-and-set-up/">ArcGIS Python API Installation</a></p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

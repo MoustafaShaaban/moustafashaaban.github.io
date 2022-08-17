@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../../img/favicon.ico">
+        <title>Service Area Analysis (From layer): - Moustafa Shaaban</title>
+        <link href="../../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../../..">Moustafa Shaaban</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../../../resume/" class="nav-link">Resume</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../../projects/" class="nav-link">Projects</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../tutorials/" class="nav-link">Tutorials</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#service-area-analysis-from-layer" class="nav-link">Service Area Analysis (From layer):</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#further-articles-and-blog-posts-to-learn-more" class="nav-link">Further articles and blog posts to learn more:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="service-area-analysis-from-layer">Service Area Analysis (From layer):</h1>
+<ul>
+<li>
+<p>In this tutorial we will learn how to use the Service Area Network Analysis () in Dijon city.</p>
+</li>
+<li>
+<p>We will continue from where we left of in the second tutorial you can find it <a href="../../2-point-to-point-fastest-path/steps/">point-to-point-fastest-path</a></p>
+</li>
+</ul>
+<h4 id="goal">Goal:</h4>
+<ul>
+<li>
+<p>Download free OSM data using the QuickOSM Plugin for QGIS</p>
+</li>
+<li>
+<p>Show all the roads that the hospitals in Dijon can cover in 10 minutes.</p>
+</li>
+</ul>
+<h4 id="required-data">Required data:</h4>
+<p>Data Sources:</p>
+<ul>
+<li>
+<p><a href="https://gadm.org/download_country36.html">GADM</a></p>
+</li>
+<li>
+<p><a href="https://download.geofabrik.de/europe/france/bourgogne.html">Geofabrik</a></p>
+</li>
+</ul>
+<p>We will use the same data we extracted on the last tutorial:</p>
+<ul>
+<li>Matching features layer which is extracted from a shapefile containing the cantons of France which is the boundaries of Dijon canton.</li>
+<li>Extracted (location) layer which contains the roads inside Dijon canton.</li>
+</ul>
+<h4 id="step-by-step-tutorial">Step by Step Tutorial:</h4>
+<h4 id="step-1-download-and-style-the-data">Step 1 Download and style the data:</h4>
+<ul>
+<li>Click on the Plugins menu from QGIS toolbar and then click on Manage and Install Plugins:</li>
+</ul>
+<p><img alt="Plugins" src="../images/image1.jpg" /></p>
+<p><img alt="Plugins" src="../images/image2.jpg" /></p>
+<ul>
+<li>In the search bar type QuickOSM and then click on Install Plugin:</li>
+</ul>
+<p><img alt="QuickOSM" src="../images/image3.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image4.jpg" /></p>
+<ul>
+<li>Open the QuickOSM plugin by clicking on its icon:</li>
+</ul>
+<p><img alt="QuickOSM" src="../images/image5.jpg" /></p>
+<ul>
+<li>The plugin menu will appear, In the Preset search bar type hospital and click on Facilities/Health/Hospital, A new Query will appear which for all the hospitals. Then in the location type Dijon, To search for Hospitals that are located in Dijon only. Finally click on Run query:</li>
+</ul>
+<p><img alt="QuickOSM" src="../images/image6.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image7.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image8.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image9.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image10.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image11.jpg" /></p>
+<ul>
+<li>Two new layers are added by the query, a point and a polygon layer, let's turn off the polygon layer as we will not use it.</li>
+</ul>
+<p><img alt="QuickOSM" src="../images/image12.jpg" /></p>
+<ul>
+<li>Let's choose a new style for the "amenity hospital healthcare hospital Dijon" layer:</li>
+</ul>
+<p><img alt="QuickOSM" src="../images/image13.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image14.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image15.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image16.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image17.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image18.jpg" /></p>
+<ul>
+<li>We can have a look at the Attribute table to see its content:</li>
+</ul>
+<p><img alt="QuickOSM" src="../images/image19.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image20.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image21.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image22.jpg" /></p>
+<h4 id="step-2-network-analysis-service-area">Step 2 Network Analysis Service Area:</h4>
+<ul>
+<li>Click on the Processing menu from QGIS toolbar then open the Toolbox.</li>
+</ul>
+<p><img alt="QuickOSM" src="../images/image23.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image24.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image25.jpg" /></p>
+<ul>
+<li>From the Processing Toolbox go to Network analysis &gt; Service area (from layer).</li>
+</ul>
+<p><img alt="QuickOSM" src="../images/image26.jpg" /></p>
+<ul>
+<li>The Service Area (from layer) algorithm window will open, Choose the "Extracted (location)" layer as the Vector layer representing network. Then, choose "Fastest" as the Path type to calculate, this type takes the Travel cost as time, In our case we will make it as 10 minutes:</li>
+</ul>
+<p><img alt="QuickOSM" src="../images/image27.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image28.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image29.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image30.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image31.jpg" /></p>
+<ul>
+<li>In the Advanced parameter, choose the oneway field as the Direction field, and F for the Value for forward direction, T for Value for backward direction, B for Value for both directions, and maxspeed as the Speed field,  Finally click Run to run the algorithm:</li>
+</ul>
+<p><img alt="QuickOSM" src="../images/image32.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image33.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image34.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image35.jpg" /></p>
+<p><img alt="QuickOSM" src="../images/image36.jpg" /></p>
+<h2 id="further-articles-and-blog-posts-to-learn-more">Further articles and blog posts to learn more:</h2>
+<p><a href="https://gisgeography.com/network-analysis/">GIS Geography</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../../js/base.js" defer></script>
+        <script src="../../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
