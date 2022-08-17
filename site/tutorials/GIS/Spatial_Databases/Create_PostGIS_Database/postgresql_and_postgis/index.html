@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>Create a PostGIS Database: - Moustafa Shaaban</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">Moustafa Shaaban</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../../resume/" class="nav-link">Resume</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../projects/" class="nav-link">Projects</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../tutorials/" class="nav-link">Tutorials</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#create-a-postgis-database" class="nav-link">Create a PostGIS Database:</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#steps" class="nav-link">Steps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-a-server-inside-pgadmin-4-to-contain-postgis-databases" class="nav-link">Create a Server inside pgAdmin 4 to contain PostGIS databases:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-a-postgresql-database-and-add-an-extension-to-posgis" class="nav-link">Create a PostgreSQL database and add an extension to PosGIS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#connect-postgis-database-in-qgis" class="nav-link">Connect PostGIS database in QGIS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#add-data-to-postgis-database-using-qgis-db-manager" class="nav-link">Add data to PostGIS database using QGIS DB Manager</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#run-sql-queries-in-pgadmin-4" class="nav-link">Run SQL Queries in pgAdmin 4</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#further-articles-to-learn-more" class="nav-link">Further articles to learn more:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="create-a-postgis-database">Create a PostGIS Database:</h1>
+<ul>
+<li>
+<p>This is the second tutorial about using PostgreSQL database and PostGIS spatial extension, you can find the first tutorial which cover installing PostgreSQL and PostGIS on Windows os <a href="../../PostgreSQL_and_PostGIS/postgresql_and_postgis/">here</a></p>
+</li>
+<li>
+<p>In this tutorial we will learn how to create a PostgreSQL database and add PostGIS spatial extension to it.</p>
+</li>
+<li>
+<p>I will use the same data I used in my SpatiaLite database tutorial you can find it <a href="../../SpatiaLite/spatialite/">here</a></p>
+</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<ul>
+<li>Create a Server inside pgAdmin 4 to contain PostGIS databases </li>
+<li>Create a PostgreSQL database and add an extension to PosGIS</li>
+<li>Connect PostGIS database in QGIS</li>
+<li>Add data to PostGIS database using QGIS DB Manager</li>
+<li>Run SQL Queries in pgAdmin 4</li>
+</ul>
+<h2 id="create-a-server-inside-pgadmin-4-to-contain-postgis-databases">Create a Server inside pgAdmin 4 to contain PostGIS databases:</h2>
+<ul>
+<li>
+<p>Open start menu and search for pgAdmin 4 then open it.</p>
+</li>
+<li>
+<p>When you open pgAdmin it will ask you to enter your password, enter it and click Ok.</p>
+</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image1.jpg" /></p>
+<p><img alt="PostgreSQL" src="../images/image2.jpg" /></p>
+<ul>
+<li>
+<p>Expand the Servers to see its content (It will ask you to type your password again, you can save your password for future use).</p>
+</li>
+<li>
+<p>You will see a server called PostgreSQL 14 which we can use to create databases inside it, But, we will register a new server which will contain only databases with PostGIS spatial extension.</p>
+</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image3.jpg" /></p>
+<p><img alt="PostgreSQL" src="../images/image4.jpg" /></p>
+<ul>
+<li>Rigth click on Servers and choose Register &gt; Server 
+<img alt="PostgreSQL" src="../images/image5.jpg" /></li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image6.jpg" /></p>
+<ul>
+<li>The Register - Server window will appear. In the Name box type PostGIS (or any other name you want).</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image7.jpg" /></p>
+<p><img alt="PostgreSQL" src="../images/image8.jpg" /></p>
+<ul>
+<li>
+<p>Next, Click on the Connection tab and type localhost as the Host name / address (meaning that our server will run locally in our computer), and keep the Port, Maintenance database and Username with their default values (5432, postgres, postgres).</p>
+</li>
+<li>
+<p>Add a password to your server (you can choose the same password for the database and other servers ) then toggle the Save password option, Finally click Save.</p>
+</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image9.jpg" /></p>
+<ul>
+<li>You will see that a new Server called PostGIS added to your Servers in pgAdmin Browser panel</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image10.jpg" /></p>
+<h2 id="create-a-postgresql-database-and-add-an-extension-to-posgis">Create a PostgreSQL database and add an extension to PosGIS</h2>
+<ul>
+<li>Expand the PostGIS Server and right click on Databases and choose Create &gt; Database...</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image11.jpg" /></p>
+<p><img alt="PostgreSQL" src="../images/image12.jpg" /></p>
+<ul>
+<li>The Create - Database window will appear. Type us_states ad the Database which will create a database called us_states (Also you can name your database whatever you like).</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image13.jpg" /></p>
+<p><img alt="PostgreSQL" src="../images/image14.jpg" /></p>
+<ul>
+<li>Click on SQL tab to see the SQL command which will be used by pgAdmin to create your database then click Save:</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image15.jpg" /></p>
+<ul>
+<li>Now its time to add an PostGIS extension to our new database. Expand the us_states database and right click on Extensions then choose Create &gt; Extension...</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image16.jpg" /></p>
+<p><img alt="PostgreSQL" src="../images/image17.jpg" /></p>
+<ul>
+<li>The Create - Extension window will appear. In the Name type postgis and left choose it from the dropdown menu.</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image18.jpg" /></p>
+<p><img alt="PostgreSQL" src="../images/image19.jpg" /></p>
+<ul>
+<li>Again click on the SQL tab to see the SQL command that pgAdmin will use to add an extension to the database. Then click Save.</li>
+</ul>
+<p><img alt="PostgreSQL" src="../images/image20.jpg" /></p>
+<p><img alt="PostgreSQL" src="../images/image21.jpg" /></p>
+<ul>
+<li>Now that we have a PostgreSQL database with the PostGIS spatial extension added to it we can continue to our next step to connect our database to QGIS.</li>
+</ul>
+<h2 id="connect-postgis-database-in-qgis">Connect PostGIS database in QGIS</h2>
+<ul>
+<li>
+<p>Open the QGIS software and create a new blank project.</p>
+</li>
+<li>
+<p>Add the 'us_state_pop' shapefile to the project interface as this is the data we are going to add to our database.</p>
+</li>
+</ul>
+<p><img alt="PostGIS" src="../images/image22.jpg" /></p>
+<p><img alt="PostGIS" src="../images/image23.jpg" /></p>
+<ul>
+<li>Now, from the QGIS Browser panel right click on PostGIS and click on New Connection...</li>
+</ul>
+<p><img alt="PostGIS" src="../images/image24.jpg" /></p>
+<p><img alt="PostGIS" src="../images/image25.jpg" /></p>
+<ul>
+<li>The Create a New PostGIS Connection window will appear. Type us_states as the Name of the connection, localhost as the Host, 5432 as the Port and us_states as the Database. Then click on Basic inside Authentication panel:</li>
+</ul>
+<p><img alt="GADM" src="../images/image26.jpg" /></p>
+<p><img alt="GADM" src="../images/image27.jpg" /></p>
+<ul>
+<li>In the Basic Authentication type your database username (postgres) and your password and click on Store to save your credentials for future use. Finally click Ok to connect to the database</li>
+</ul>
+<p><img alt="GADM" src="../images/image28.jpg" /></p>
+<p><img alt="GADM" src="../images/image29.jpg" /></p>
+<ul>
+<li>You will see a warning about saving your password inside QGIS. But its okay if you are the only one using your computer. Click Ok to confirm or Cancel then uncheck the Store checkboxes if there is someone else who has access to your computer.</li>
+</ul>
+<p><img alt="GADM" src="../images/image30.jpg" /></p>
+<h2 id="add-data-to-postgis-database-using-qgis-db-manager">Add data to PostGIS database using QGIS DB Manager</h2>
+<ul>
+<li>In the QGIS window click on Database and choose DB Manager...</li>
+</ul>
+<p><img alt="GADM" src="../images/image31.jpg" /></p>
+<p><img alt="GADM" src="../images/image32.jpg" /></p>
+<ul>
+<li>The DB Manager window will appear, Expand the PostGIS and us_states database to connect to the database and see its content</li>
+</ul>
+<p><img alt="GADM" src="../images/image33.jpg" /></p>
+<p><img alt="GADM" src="../images/image34.jpg" /></p>
+<p><img alt="GADM" src="../images/image35.jpg" /></p>
+<p><img alt="GADM" src="../images/image36.jpg" /></p>
+<p><img alt="GADM" src="../images/image37.jpg" /></p>
+<ul>
+<li>
+<p>Now its time to add our data to the database.</p>
+</li>
+<li>
+<p>In the QGIS DB Manager window click on the Import Layer/File... button.</p>
+</li>
+<li>
+<p>The Import vector layer will appear. In the Input dropdown menu choose the us_state_pop shapefile and in the Schema dropdown menu choose the public scheme.</p>
+</li>
+</ul>
+<p><img alt="GADM" src="../images/image38.jpg" /></p>
+<ul>
+<li>As we did in the <a href="../../SpatiaLite/spatialite/">SpatiaLite</a> tutorial we can add an id to our database table and Create a spatial index which will help us to query the database fast. Finally click Ok to load the data to the database.</li>
+</ul>
+<p><img alt="GADM" src="../images/image39.jpg" /></p>
+<p><img alt="GADM" src="../images/image40.jpg" /></p>
+<ul>
+<li>You will see a new table called us_state_pop added to our public schema, expand it and click on the Table tab to see its content</li>
+</ul>
+<p><img alt="GADM" src="../images/image41.jpg" /></p>
+<p><img alt="GADM" src="../images/image42.jpg" /></p>
+<p><img alt="GADM" src="../images/image43.jpg" /></p>
+<p><img alt="GADM" src="../images/image44.jpg" /></p>
+<p><img alt="GADM" src="../images/image45.jpg" /></p>
+<ul>
+<li>We can run our SQL queries inside QGIS DB Manager like we did in the SpatiaLite tutorial, But, in this tutorial lets use another option which is pgAdmin. That's what we are going to do the next step.</li>
+</ul>
+<h2 id="run-sql-queries-in-pgadmin-4">Run SQL Queries in pgAdmin 4</h2>
+<ul>
+<li>Back to pgAdmin 4 if we expand the us_states Schemas &gt; public &gt; Tables we will see the us_state_pop table added to our database.</li>
+</ul>
+<p><img alt="GADM" src="../images/image46.jpg" /></p>
+<p><img alt="GADM" src="../images/image47.jpg" /></p>
+<p><img alt="GADM" src="../images/image48.jpg" /></p>
+<ul>
+<li>Expand the table to see its content</li>
+</ul>
+<p><img alt="GADM" src="../images/image49.jpg" /></p>
+<p><img alt="GADM" src="../images/image50.jpg" /></p>
+<p><img alt="GADM" src="../images/image51.jpg" /></p>
+<ul>
+<li>Now, lets use SQL to Query our database. Right click on the us_state_pop and choose Query Tool</li>
+</ul>
+<p><img alt="GADM" src="../images/image52.jpg" /></p>
+<ul>
+<li>A new Query window will appear which we can use to type our SQL queries</li>
+</ul>
+<p><img alt="GADM" src="../images/image53.jpg" /></p>
+<ul>
+<li>Let's type a SQL query to see all the content in our table and click the arrow button to execute the query</li>
+</ul>
+<p>SELECT * FROM us_state_pop;</p>
+<p><img alt="GADM" src="../images/image54.jpg" /></p>
+<p><img alt="GADM" src="../images/image55.jpg" /></p>
+<p><img alt="GADM" src="../images/image56.jpg" /></p>
+<ul>
+<li>Another SQL query which will return the name and population count of all the us states that has more than 10 million population count.</li>
+</ul>
+<p>SELECT name_1, pop FROM us_state_pop WHERE pop &gt; 10000000;</p>
+<p><img alt="GADM" src="../images/image57.jpg" /></p>
+<ul>
+<li>The next query will return the same output of the last query but the data will be orderd descendingly by the population count:</li>
+</ul>
+<p>SELECT name_1, pop FROM us_state_pop WHERE pop &gt; 10000000 ORDER BY pop DESC;</p>
+<p><img alt="GADM" src="../images/image58.jpg" /></p>
+<ul>
+<li>That's it for today's tutorial. We learned how to use the free PostgreSQL database management software pgAmin to create, manage and query a spatial database.</li>
+</ul>
+<h2 id="further-articles-to-learn-more">Further articles to learn more:</h2>
+<p><a href="https://postgis.net/workshops/postgis-intro/creating_db.html">Creating a Spatial Database</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js" defer></script>
+        <script src="../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

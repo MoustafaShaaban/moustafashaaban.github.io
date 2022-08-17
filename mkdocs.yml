@@ -1,0 +1,13 @@
+site_name: Moustafa Shaaban
+
+nav:
+    - Resume: resume.md
+    - Projects: projects.md
+    - Tutorials: tutorials/tutorials.md
+
+
+
+# Adding the git revision date plugin
+plugins:
+    - search
+    - git-revision-date

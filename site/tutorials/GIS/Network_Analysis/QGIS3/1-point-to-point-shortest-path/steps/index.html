@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../../img/favicon.ico">
+        <title>Point to Point Analysis (Shortest path): - Moustafa Shaaban</title>
+        <link href="../../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../../..">Moustafa Shaaban</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../../../resume/" class="nav-link">Resume</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../../projects/" class="nav-link">Projects</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../tutorials/" class="nav-link">Tutorials</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#point-to-point-analysis-shortest-path" class="nav-link">Point to Point Analysis (Shortest path):</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#further-articles-and-blog-posts-to-learn-more" class="nav-link">Further articles and blog posts to learn more:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="point-to-point-analysis-shortest-path">Point to Point Analysis (Shortest path):</h1>
+<ul>
+<li>Point-to-point network analysis is one of the most used network analysis, 
+we use it to calculate the shortest or fastest route between two points (Starting and Ending points).</li>
+</ul>
+<h4 id="goal">Goal:</h4>
+<ul>
+<li>Calculate the closest route between two points in the city of Dijon using OSM (Open Street Map) free data.</li>
+</ul>
+<h4 id="download-the-required-data">Download the required data:</h4>
+<p>Data Sources:</p>
+<p><a href="https://gadm.org/download_country36.html">GADM</a></p>
+<p><a href="https://download.geofabrik.de/europe/france/bourgogne.html">Geofabrik</a></p>
+<ul>
+<li>First go to GADM website by clicking on the following link <a href="https://gadm.org/download_country36.html">GADM</a>
+and from the Country drop down menu choose France.
+Then click on Shapefile to download it:</li>
+</ul>
+<p><img alt="GADM" src="../images/network_analysis_point-to-point/1-gadm_shapefile.png" title="GADM Website" /></p>
+<ul>
+<li>Now go to Geofabrik website to download free OSM data exactly the Bourgogne region of France where Dijon city is located
+by clicking on this link <a href="https://download.geofabrik.de/europe/france/bourgogne.html">Geofabrik</a></li>
+</ul>
+<p><img alt="Geofabrik" src="../images/network_analysis_point-to-point/2-geofabrik_data.png" title="Geofabrik Website" /></p>
+<ul>
+<li>Save the data files and extract the zip files in any location you want (you can leave it in the downloads folder for easy access to it).</li>
+</ul>
+<h3 id="step-1-add-the-gadm36_fra_4shp-layer">Step 1: Add the gadm36_FRA_4.shp layer:</h3>
+<p><img alt="gadm36_FRA_4.shp" src="../images/network_analysis_point-to-point/image1.jpeg" /></p>
+<h3 id="step-2-in-qgis-window-open-the-processing-menu-and-click-on-toolbox">Step 2: In QGIS window open the Processing menu and click on Toolbox:</h3>
+<p><img alt="Processing menu" src="../images/network_analysis_point-to-point/image2.jpeg" /></p>
+<h3 id="step-3-from-the-processing-toolbox-select-vector-selection-then-extract-by-expression-option-which-allows-us-to-extract-data-to-a-new-layer-by-using-an-expression">Step 3: From the Processing Toolbox select Vector selection then Extract by expression option which allows us to extract data to a new layer by using an expression:</h3>
+<p><img alt="Processing Toolbox" src="../images/network_analysis_point-to-point/image3.jpeg" /></p>
+<h3 id="step-4-the-extract-by-expression-window-will-open-now-click-on-the-expression-icon">Step 4: The Extract by expression window will open, now click on the Expression icon:</h3>
+<p><img alt="Extract by expression" src="../images/network_analysis_point-to-point/image4.jpeg" /></p>
+<h3 id="step-5-in-the-search-box-type-name-then-double-click-on-the-name_4-from-fields-and-values">Step 5: In the search box type name, then, double click on the NAME_4 from Fields and Values:</h3>
+<p><img alt="Extract by expression" src="../images/network_analysis_point-to-point/image5.jpeg" /></p>
+<h3 id="step-6-now-complete-the-expression-as-follow-name_4-dijon-to-extract-the-dijon-city-boundaries-and-then-click-ok">Step 6:  Now complete the expression as follow (“NAME_4” = ‘Dijon’) to extract the Dijon city boundaries and then click Ok:</h3>
+<p><img alt="expression" src="../images/network_analysis_point-to-point/image6.jpeg" /></p>
+<p><img alt="expression" src="../images/network_analysis_point-to-point/image7.jpeg" /></p>
+<p><img alt="expression" src="../images/network_analysis_point-to-point/image8.jpeg" /></p>
+<h3 id="step-7-click-run-to-run-the-algorithm-a-new-layer-called-matching-features-will-be-created">Step 7: Click Run to run the algorithm, A new layer called Matching features will be created:</h3>
+<p><img alt="Matching features" src="../images/network_analysis_point-to-point/image9.jpeg" /></p>
+<p><img alt="Matching features" src="../images/network_analysis_point-to-point/image10.jpeg" /></p>
+<h3 id="step-8-turn-off-the-gadm36_fra_4shp-layer-and-right-click-on-the-matching-features-layer-then-select-zoom-to-layers-to-see-the-result">Step 8: Turn off the gadm36_FRA_4.shp layer and right click on the Matching features layer then select Zoom to layers to see the result:</h3>
+<p><img alt="Matching features" src="../images/network_analysis_point-to-point/image11.jpeg" /></p>
+<p><img alt="Matching features" src="../images/network_analysis_point-to-point/image12.jpeg" /></p>
+<p><img alt="Matching features" src="../images/network_analysis_point-to-point/image13.jpeg" /></p>
+<p><img alt="Matching features" src="../images/network_analysis_point-to-point/image14.jpeg" /></p>
+<h3 id="step-9-open-the-styling-panel-to-style-the-newly-created-layer-then-choose-the-outline-blue-style">Step 9: Open the Styling panel to style the newly created layer, then choose the outline blue style:</h3>
+<p><img alt="Styling panel" src="../images/network_analysis_point-to-point/image15.jpeg" /></p>
+<p><img alt="Styling panel" src="../images/network_analysis_point-to-point/image16.jpeg" /></p>
+<p><img alt="Styling panel" src="../images/network_analysis_point-to-point/image17.jpeg" /></p>
+<h3 id="step-10-now-we-can-add-the-second-data-layer-gis_osm_roads_free_1shp">Step 10: Now we can add the second data layer: gis_osm_roads_free_1.shp:</h3>
+<p><img alt="gis_osm_roads_free_1.shp" src="../images/network_analysis_point-to-point/image18.jpeg" /></p>
+<h3 id="step-11-from-the-processing-toolbox-vector-selection-choose-extract-by-location-tool">Step 11: From the Processing Toolbox &gt; Vector selection choose Extract by location tool:</h3>
+<p><img alt="gis_osm_roads_free_1.shp" src="../images/network_analysis_point-to-point/image19.jpeg" /></p>
+<h3 id="step-12-the-extract-by-location-window-will-appear-in-the-extract-features-from-choose-the-gis_osm_roads_free_1shp-layer-and-in-the-where-the-features-geometric-predicate-check-only-are-within-option-and-in-by-comparing-to-the-features-from-choose-the-matching-features-layer-then-click-run">Step 12: The Extract by location window will appear. In the Extract features from choose the gis_osm_roads_free_1.shp layer. And in the Where the features (geometric predicate) check only (are within) option, and in By comparing to the features from choose the Matching features layer, then click Run:</h3>
+<p><img alt="Extract by location window" src="../images/network_analysis_point-to-point/image20.jpeg" /></p>
+<p><img alt="Extract by location window" src="../images/network_analysis_point-to-point/image21.jpeg" /></p>
+<p><img alt="Extract by location window" src="../images/network_analysis_point-to-point/image22.jpeg" /></p>
+<h3 id="step-13-turn-off-the-gis_osm_roads_free_1shp-layer-to-see-the-results-well">Step 13: Turn off the gis_osm_roads_free_1.shp layer to see the results well:</h3>
+<p><img alt="Extract by location" src="../images/network_analysis_point-to-point/image23.jpeg" /></p>
+<p><img alt="Extract by location" src="../images/network_analysis_point-to-point/image24.jpeg" /></p>
+<h3 id="step-14-now-we-can-choose-a-good-style-for-our-new-layer-back-to-the-styling-panel-choose-the-topo-road-style-for-the-extracted-location-layer">Step 14: Now we can choose a good style for our new layer, back to the styling panel choose the Topo road style for the Extracted (location layer) :</h3>
+<p><img alt="Topo road style" src="../images/network_analysis_point-to-point/image25.jpeg" /></p>
+<p><img alt="Topo road style" src="../images/network_analysis_point-to-point/image26.jpeg" /></p>
+<h3 id="step-15-now-its-time-for-the-network-analysis-shortest-path-point-to-point-back-the-processing-toolbox-network-analysis-shortest-path-point-to-point">Step 15: Now, It’s time for the Network analysis (Shortest path point to point), Back the Processing Toolbox &gt; Network Analysis &gt; Shortest path (point to point):</h3>
+<p><img alt="Network analysis" src="../images/network_analysis_point-to-point/image27.jpeg" /></p>
+<h3 id="step-16-make-sure-that-the-extracted-location-layer-is-selected-as-the-vector-layer-representing-network-and-then-click-on-the-icon-next-to-the-start-point-to-pick-a-start-point-from-the-layer-then-do-the-same-for-the-end-point">Step 16: Make sure that the Extracted (location) layer is selected as the Vector layer representing network, and then click on the icon next to the Start point to pick a start point from the layer, then do the same for the End point:</h3>
+<p><img alt="Network analysis" src="../images/network_analysis_point-to-point/image28.jpeg" /></p>
+<p><img alt="Network analysis" src="../images/network_analysis_point-to-point/image29.jpeg" /></p>
+<p><img alt="Network analysis" src="../images/network_analysis_point-to-point/image30.jpeg" /></p>
+<p><img alt="Network analysis" src="../images/network_analysis_point-to-point/image31.jpeg" /></p>
+<h3 id="step-17-in-the-advanced-parameter-choose-the-oneway-field-as-the-direction-field-and-f-for-the-value-for-forward-direction-t-for-value-for-backward-direction-and-b-for-value-for-both-directions-finally-click-run-to-run-the-algorithm">Step 17: In the Advanced parameter, choose the oneway field as the Direction field, and F for the Value for forward direction, T for Value for backward direction, and B for Value for both directions, Finally click Run to run the algorithm :</h3>
+<p><img alt="Network analysis" src="../images/network_analysis_point-to-point/image32.jpeg" /></p>
+<h3 id="step-18-a-new-layer-called-shortest-path-will-be-created-lets-choose-a-different-style-like-topo-main-road-so-we-can-see-it">Step 18: A new layer called Shortest path will be created, let’s choose a different style like (Topo main road) so we can see it:</h3>
+<p><img alt="Network analysis" src="../images/network_analysis_point-to-point/image33.jpeg" /></p>
+<p><img alt="Network analysis" src="../images/network_analysis_point-to-point/image34.jpeg" /></p>
+<p><img alt="Network analysis" src="../images/network_analysis_point-to-point/image35.jpeg" /></p>
+<h3 id="step-19-thats-it-here-is-the-shortest-path-between-the-start-and-end-point-that-we-picked">Step 19: That’s it, Here is the Shortest path between the start and end point that we picked!</h3>
+<p><img alt="Network analysis" src="../images/network_analysis_point-to-point/image36.jpeg" /></p>
+<h2 id="further-articles-and-blog-posts-to-learn-more">Further articles and blog posts to learn more:</h2>
+<p><a href="https://gisgeography.com/network-analysis/">GIS Geography</a></p>
+<p><a href="https://www.qgistutorials.com/en/docs/3/basic_network_analysis.html">QGIS Tutorials</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../../js/base.js" defer></script>
+        <script src="../../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../../../img/favicon.ico">
+        <title>Point to Point Analysis (Fastest path): - Moustafa Shaaban</title>
+        <link href="../../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../../..">Moustafa Shaaban</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../../../../resume/" class="nav-link">Resume</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../../projects/" class="nav-link">Projects</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../../tutorials/" class="nav-link">Tutorials</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#point-to-point-analysis-fastest-path" class="nav-link">Point to Point Analysis (Fastest path):</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#further-articles-and-blog-posts-to-learn-more" class="nav-link">Further articles and blog posts to learn more:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="point-to-point-analysis-fastest-path">Point to Point Analysis (Fastest path):</h1>
+<ul>
+<li>
+<p>This is the second and final tutorial on GIS network analysis (Point-to-point analysis) Where we will calculate the fastest route between 2 points in Dijon city.</p>
+</li>
+<li>
+<p>We will continue from where we left of in the first tutorial you can find it <a href="../../1-point-to-point-shortest-path/steps/">point-to-point-shortest-path</a></p>
+</li>
+</ul>
+<h4 id="goal">Goal:</h4>
+<ul>
+<li>
+<p>Explore some of GIS operations like selecting data by expression and editing data inside the Attribute Table.</p>
+</li>
+<li>
+<p>Calculate the fastest route between two points in the city of Dijon using OSM (Open Street Map) free data.</p>
+</li>
+</ul>
+<h4 id="required-data">Required data:</h4>
+<p>Data Sources:</p>
+<ul>
+<li>
+<p><a href="https://gadm.org/download_country36.html">GADM</a></p>
+</li>
+<li>
+<p><a href="https://download.geofabrik.de/europe/france/bourgogne.html">Geofabrik</a></p>
+</li>
+</ul>
+<p>We will use the same data we extracted on the last tutorial:</p>
+<ul>
+<li>Matching features layer which is extracted from a shapefile containing the cantons of France which is the boundaries of Dijon canton.</li>
+<li>Extracted (location) layer which contains the roads inside Dijon canton.</li>
+</ul>
+<h4 id="step-by-step-tutorial">Step by Step Tutorial:</h4>
+<h4 id="step-1-right-click-on-the-extracted-location-layer-and-select-open-attribute-table">Step 1: Right-click on the Extracted (location) layer and select Open Attribute Table:</h4>
+<p><img alt="Attribute Table" src="../images/image1.jpg" /></p>
+<p><img alt="Attribute Table" src="../images/image2.jpg" /></p>
+<h4 id="step-2-sort-the-values-inside-the-attribute-table-then-edit-it">Step 2: Sort the values inside the Attribute table then edit it:</h4>
+<ul>
+<li>
+<p>We need to sort the maxspeed field by ascending order by clicking on it one time, we will see that there are alot of rows that have the value of zero, we need to fix this.</p>
+</li>
+<li>
+<p>We will start by selecting all the values that have a 0 value by clicking on the Select by expression icon:</p>
+</li>
+</ul>
+<p><img alt="Attribute Table" src="../images/image3.jpg" /></p>
+<ul>
+<li>Then we search for the field maxspeed and double click on it to select it for the expression, and now we can complete the expression as follow "maxspeed" = 0</li>
+</ul>
+<p><img alt="Attribute Table" src="../images/image4.jpg" /></p>
+<ul>
+<li>Now we click on the Select features button, we will see that all the rows that has a value of 0 in the maxspeed field are now selected.</li>
+</ul>
+<p><img alt="Attribute Table" src="../images/image5.jpg" /></p>
+<ul>
+<li>
+<p>Then, we will edit all the selected values to be 10 (I know this is not the correct way to edit the data, in the real world we need to insert the correct maxspeed value for each road, but this is only for practice, so we can make pick any value for those missing data which will be better than leaving it as zeros).</p>
+</li>
+<li>
+<p>We need to turn on the editing mode to start editing the data, and from the field dropdown menu we select the maxspeed field:</p>
+</li>
+</ul>
+<p><img alt="Attribute Table" src="../images/image6.jpg" /></p>
+<p><img alt="Attribute Table" src="../images/image7.jpg" /></p>
+<p><img alt="Attribute Table" src="../images/image8.jpg" /></p>
+<ul>
+<li>We type the value 10 inside the update values box and click on the Update Selected to only update the selected values.</li>
+</ul>
+<blockquote>
+<p>[!WARNING]
+If you clicked on the Update All button all the values inside the maxspeed field in the Attribute Table will be changed to 10 (This is not what we need!)</p>
+</blockquote>
+<p><img alt="Attribute Table" src="../images/image9.jpg" /></p>
+<ul>
+<li>Now deselect all the values bu clicking on the Deselect all features from the layer icon, and then save the edits and turn off the editing mode, then close the Attribute Table:</li>
+</ul>
+<p><img alt="Attribute Table" src="../images/image10.jpg" /></p>
+<p><img alt="Attribute Table" src="../images/image11.jpg" /></p>
+<p><img alt="Attribute Table" src="../images/image12.jpg" /></p>
+<p><img alt="Attribute Table" src="../images/image13.jpg" /></p>
+<h4 id="step-3-calculate-the-fastest-path-between-two-points-start-and-end-points">Step 3: Calculate the Fastest path between two points (Start and End points):</h4>
+<ul>
+<li>
+<p>Open the Processing Toolbox by Clicking on the Processing menu then chosing the Toolbox:</p>
+</li>
+<li>
+<p>From the Processing Toolbox, expand the Network analysis, and open the Shortest path (point-to-point) algorithm:</p>
+</li>
+</ul>
+<p><img alt="Network analysis" src="../images/image14.jpg" /></p>
+<p><img alt="Network analysis" src="../images/image15.jpg" /></p>
+<ul>
+<li>
+<p>Make sure that the Extracted (location) layer is selected as the Vector layer representing network.</p>
+</li>
+<li>
+<p>In the Path type to calculate choose the Fastest.</p>
+</li>
+</ul>
+<p><img alt="Path type" src="../images/image16.jpg" /></p>
+<p><img alt="Path type" src="../images/image17.jpg" /></p>
+<ul>
+<li>choose the Start and End point:</li>
+</ul>
+<p><img alt="Start and End point" src="../images/image18.jpg" /></p>
+<p><img alt="Start and End point" src="../images/image19.jpg" /></p>
+<p><img alt="Start and End point" src="../images/image20.jpg" /></p>
+<p><img alt="Start and End point" src="../images/image21.jpg" /></p>
+<p><img alt="Start and End point" src="../images/image22.jpg" /></p>
+<ul>
+<li>In the Advanced parameter, choose the oneway field as the Direction field, and F for the Value for forward direction, T for Value for backward direction, B for Value for both directions, and maxspeed as the Speed field,  Finally click Run to run the algorithm:</li>
+</ul>
+<p><img alt="Shortest path" src="../images/image23.jpg" /></p>
+<p><img alt="Shortest path" src="../images/image24.jpg" /></p>
+<p><img alt="Shortest path" src="../images/image25.jpg" /></p>
+<ul>
+<li>A new layer called Shortest path will be created, let’s choose a different style like (Topo main road) so we can see it:</li>
+</ul>
+<p><img alt="Shortest path" src="../images/image26.jpg" /></p>
+<p><img alt="Shortest path" src="../images/image27.jpg" /></p>
+<p><img alt="Shortest path" src="../images/image28.jpg" /></p>
+<p><img alt="Shortest path" src="../images/image29.jpg" /></p>
+<ul>
+<li>Right-click on the Shortest path layer, then, click on the Zoom to layers to see the end result:</li>
+</ul>
+<p><img alt="Shortest path" src="../images/image30.jpg" /></p>
+<p><img alt="Shortest path" src="../images/image31.jpg" /></p>
+<p><img alt="Shortest path" src="../images/image32.jpg" /></p>
+<ul>
+<li>That's it, We have the fastest route we can choose between the Starting and ending point by considering the maxspeed of each road in our network data set.</li>
+</ul>
+<h2 id="further-articles-and-blog-posts-to-learn-more">Further articles and blog posts to learn more:</h2>
+<p><a href="https://gisgeography.com/network-analysis/">GIS Geography</a></p>
+<p><a href="https://www.qgistutorials.com/en/docs/3/basic_network_analysis.html">QGIS Tutorials</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../../js/base.js" defer></script>
+        <script src="../../../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
