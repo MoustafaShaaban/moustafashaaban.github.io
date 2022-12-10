@@ -19,7 +19,7 @@
 * Create a Jupyter Notebook file and choose the conda environment kernel to use.
 
 
-# Download VS Code:
+## Download VS Code:
 
 * Open your web browser (here i am using Microsoft Edge) search bar type download VS Code and click enter to search.
 
@@ -43,7 +43,7 @@
 
 
 
-# Install VS Code:
+## Install VS Code:
 
 * After you finish downloading the VSCode file go to your downloads folder and double click on the file to open it:
 
@@ -79,7 +79,7 @@
 
 ![VS Code](./images/image14.jpg)
 
-# Install Recommended Extensions:
+## Install Recommended Extensions:
 
 * When you open VS Code you will see a Get Started page which will help you to setup the application like choosing a color theme, Sync to other devices and others.
 
@@ -126,7 +126,7 @@
 * Now we are ready for the final step.
 
 
-# Create a Jupyter Notebook file and choose the conda environment kernel to use:
+## Create a Jupyter Notebook file and choose the conda environment kernel to use:
 
 * Now we are going to create a Jupyter Notebook in VS Code.
 
@@ -161,6 +161,6 @@
 
 
 
-# External Links in this Tutorial:
+## External Links in this Tutorial:
 
 [Microsoft VS Code](https://code.visualstudio.com/Download)

@@ -30,7 +30,7 @@
 * Install ArcGIS Python API using pip.
 
 
-# Create Conda Environment using the GUI tool Anaconda Navigator:
+## Create Conda Environment using the GUI tool Anaconda Navigator:
 
 * First, open your start menu and search for Anaconda Navigator and open it:
 
@@ -65,7 +65,7 @@
 ![Anaconda Distribution](./images/image9.jpg)
 
 
-# Activating the newly created conda environment using Anaconda Powershell Prompt:
+## Activating the newly created conda environment using Anaconda Powershell Prompt:
 
 * Now that our conda environment is created, we need to activate it.
 
@@ -96,7 +96,7 @@
 * And we are ready for the final step.
 
 
-# Install ArcGIS Python API using pip:
+## Install ArcGIS Python API using pip:
 
 * After activating the required environment all we need is to type one single command which is:
 
@@ -113,7 +113,7 @@
 
 
 
-# External Links in this Tutorial:
+## External Links in this Tutorial:
 
 * [Conda Environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 

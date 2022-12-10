@@ -9,7 +9,7 @@
 * Installing Python.
 * Make sure that Python is installed correctly.
 
-# Check if Python is installed in our machine:
+## Check if Python is installed in our machine:
 
 * To check if python is installed in your machine first open start menu and search for cmd to open windows command prompt.
 
@@ -39,7 +39,7 @@
 * To make sure that Python is really not installed in your system, open start menu again and search for something like Python Command Prompt. If there is no matching output this means that Python is not installed. you can now go to the next step.
 
 
-# Downloading Python 3.9 executable file:
+## Downloading Python 3.9 executable file:
 
 * Open your web browser (here i am using Microsoft Edge) search bar type Python 3.9 download and click enter to search.
 
@@ -60,7 +60,7 @@
 * Now you are ready for the next step.
 
 
-# Installing Python:
+## Installing Python:
 
 * After you finish downloading the Python file go to your downloads folder and double click on the file to open it:
 
@@ -89,7 +89,7 @@
 ![Python](./images/image16.jpg)
 
 
-# Make sure that Python is installed correctly:
+## Make sure that Python is installed correctly:
 
 * Now we can check again if Python is installed correctly in our system like we did in the begaining of this tutorial.
 
@@ -109,6 +109,6 @@
 
 
 
-# External Links in this Tutorial:
+## External Links in this Tutorial:
 
 [Python 3.9.0](https://www.python.org/downloads/release/python-390/)

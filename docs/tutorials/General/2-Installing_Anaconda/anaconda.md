@@ -10,7 +10,7 @@
 * Install Anaconda Distribution.
 
 
-# Download Anaconda Distribution executable file:
+## Download Anaconda Distribution executable file:
 
 * Open your web browser (here i am using Microsoft Edge) search bar type download Anaconda and click enter to search.
 
@@ -29,7 +29,7 @@
 * When the download if finished you will be ready for the next step:
 
 
-# Install Anaconda Distribution:
+## Install Anaconda Distribution:
 
 * After you finish downloading the Anaconda file go to your downloads folder and double click on the file to open it:
 
@@ -76,6 +76,6 @@
 
 * Now we are done, In the next tutorial we will learn how to create an Anaconda Environment and install [ArcGIS Python API](https://developers.arcgis.com/python/) inside it., You can find this tutorial [here](../3-Creating_Anaconda_Environment/anaconda_environment.md)
 
-# External Links in this Tutorial:
+## External Links in this Tutorial:
 
 [Anaconda Distribution](https://www.anaconda.com/products/distribution)
