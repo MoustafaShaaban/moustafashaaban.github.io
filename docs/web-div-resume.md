@@ -1,11 +1,11 @@
 # Web Development Resume
 
-## Moustafa Shaaban Abdelaziz
+# Moustafa Shaaban Abdelaziz
 
 * Date of Birth: 17-03-1996
 * Address: Al Ibrahimia, Alexandria, Egypt
 -----------------------------------------------------------------
-# Contact
+## Contact
 ---------
 * Email: Moustafa-Shaaban@outlook.com       
 * Phone + Whatsapp Number: 0201018989702
@@ -15,7 +15,7 @@
 
 -----------------------------------------------------------------
 
-# Summary
+## Summary
 ---------
 * Graduated from faculty of Arts department of Geography and Geographic Information Systems (GIS), Alexandria
 University.
@@ -29,7 +29,7 @@ analysis projects about spatial and non-spatial data.
 
 -----------------------------------------------------------------
 
-# Experience
+## Experience
 ------------
 #### Data Entry
   * Elsadek for Real estate valuation
@@ -47,7 +47,7 @@ analysis projects about spatial and non-spatial data.
 
 ------------
 
-# Education
+## Education
 ------------
 
 #### Alexandria University:
@@ -56,7 +56,7 @@ analysis projects about spatial and non-spatial data.
 
 -----------------------------------------------------------------
 
-# Projects
+## Projects
 -----------
 
 # Advanced Django Blog
@@ -200,7 +200,7 @@ A project built with Django web framework and Bootstrap
 * [Folium](https://python-visualization.github.io/folium/)
 
 
-# Skills
+## Skills
 ---------
 
 #### Languages:

@@ -11,7 +11,7 @@ Currently it has some projects under the name of:
 * [Django and folium](https://github.com/MoustafaShaaban/Django_and_Folium)
 
 -------------------------------------------------------------
-# Advanced Django Blog
+## Advanced Django Blog
 
 A project built with Django web framework and Bootstrap.
 
@@ -79,7 +79,7 @@ This project is a Django project called `backend` and it has two registered apps
 * UI components from the official [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/) website documentation.
 -------------------------------------------------------------
 
-# Django Todo App
+## Django Todo App
 
 A project built with Django web framework and Bootstrap
 
@@ -121,7 +121,7 @@ A project built with Django web framework and Bootstrap
 * UI components from the official Bootstrap 4.6 website documentation.
 
 ----------------------------------------------------------------
-# Django and folium
+## Django and folium
 
 ###  Project Goals
 
