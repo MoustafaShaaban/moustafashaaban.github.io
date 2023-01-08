@@ -1,6 +1,5 @@
-[My personal website](https://moustafashaaban.github.io/MoustafaShaaban)
+[My personal website](https://moustafashaaban.github.io/)
 
-[My Resume](https://moustafashaaban.github.io/MoustafaShaaban/resume/)
 
 - 📫 How to reach me:
   Phone Number + Whatsapp: +201018989702
