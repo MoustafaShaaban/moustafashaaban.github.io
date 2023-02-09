@@ -22,10 +22,7 @@ University.
 
 * I had worked as a Customer service representative, Marine surveyor assistant and Data Entry.
 
-* I am now looking for an opportunity in the field of GIS analysis or the field of data analysis, as I am trying to link
-what I studied and implemented in the college with the field of data analysis, where there is a great relationship
-between the two fields, and I also use some web development techniques to do some data visualization and
-analysis projects about spatial and non-spatial data.
+* I am now looking for an opportunity in the field of backend development using Python (Django web Framework and Django Rest Framework).
 
 -----------------------------------------------------------------
 
