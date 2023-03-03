@@ -5,12 +5,12 @@ In this tutorial we will learn how to create a new Django project, and how to re
 
 ### Steps:
 
-* Make sure that Python and pip are installed
-* Create a virtual environment.
-* Start a Django project, create and register a new app
-* Create a Django view and template
-* Register the view in a URL configuration file
-* Run the Django server to view the results.
+	* Make sure that Python and pip are installed
+	* Create a virtual environment.
+	* Start a Django project, create and register a new app
+	* Create a Django view and template
+	* Register the view in a URL configuration file
+	* Run the Django server to view the results.
 
 
 ## Make sure that Python and pip are installed

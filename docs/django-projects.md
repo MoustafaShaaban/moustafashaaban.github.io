@@ -42,9 +42,11 @@ A project built with Django web framework and Bootstrap.
 
 This project is a Django project called `backend` and it has two registered apps and one third-party app.
 
-    * The `blog` app which contians an app-level templates and urls, used for most of the functionalities of our app, like, models, forms, views, urls, and custom template tags.
+    * The `blog` app which contians an app-level templates and urls, used for most of the 
+    functionalities of our app, like, models, forms, views, urls, and custom template tags.
 
-    * The `users` app which uses `django.contrib.auth.urls` to allow users register and login to thier accounts.
+    * The `users` app which uses `django.contrib.auth.urls` to allow users register 
+    and login to thier accounts.
 
     * `crispy forms` third-party app which makes beautify django forms design.
 

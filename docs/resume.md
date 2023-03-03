@@ -1,9 +1,7 @@
-# Web Development Resume
-
 # Moustafa Shaaban Abdelaziz
 
-* Date of Birth: 17-03-1996
-* Address: Al Ibrahimia, Alexandria, Egypt
+* Year of Birth: 1996
+* Address: Alexandria, Egypt
 -----------------------------------------------------------------
 ## Contact
 ---------
@@ -20,9 +18,9 @@
 * Graduated from faculty of Arts department of Geography and Geographic Information Systems (GIS), Alexandria
 University.
 
-* I had worked as a Customer service representative, Marine surveyor assistant and Data Entry.
+* I am a Junior Software Developer with GIS background with experience in building Web applications I am seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.
 
-* I am now looking for an opportunity in the field of backend development using Python (Django web Framework and Django Rest Framework).
+Skills :  Python, JavaScript, HTML/CSS, SQL, PostgreSQL, Vue JS, Git/GitHub, Bootstrap, Django web framework, NodeJS
 
 -----------------------------------------------------------------
 
@@ -55,6 +53,43 @@ University.
 
 ## Projects
 -----------
+
+# Django Geoapp
+
+###  Project Goals
+
+* Use Django admin site to import data from different sources (CSV, JSON, ...) into the database.
+
+* Use Folium to visualize data generated from Django Database on a Leaflet JS map.
+
+* Visualize data using Folium's Simple Markers.
+
+* Users can register for an account, login, and update their information (handled by Cookiecutter Django).
+
+* Authenticated users can add, import, or export data using django forms.
+
+
+### Project Files
+
+* [Github](https://github.com/MoustafaShaaban/Django-Geoapp)
+
+### Project Preview
+
+* [Youtube](https://www.youtube.com/watch?v=dqDSYeppbGI)
+
+
+
+### Libraries and Packages used
+
+* [Django Web Framework](https://www.djangoproject.com/)
+
+* [django-import-export](https://django-import-export.readthedocs.io/en/latest/) package
+
+* [Folium](https://python-visualization.github.io/folium/)
+
+* [Cookiecutter Django](https://cookiecutter-django.readthedocs.io/en/latest/index.html)
+
+-------------------------------------
 
 # Advanced Django Blog
 
@@ -187,6 +222,8 @@ A project built with Django web framework and Bootstrap
 
 * [Version 2 on Youtube](https://www.youtube.com/watch?v=eU8r5l9-6JE)
 
+* [Version 3 on Youtube](https://www.youtube.com/watch?v=ZdYvfzODhZg)
+
 
 ### Libraries and Packages used
 
@@ -225,3 +262,5 @@ A project built with Django web framework and Bootstrap
 * JavaScript
 * Django web framework
 * Django rest framework
+* Vue JS
+* Bootstrap 5
