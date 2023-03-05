@@ -26,9 +26,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 nav:
-    - Resume: 
-        - gis-resume.md
-        - web-div-resume.md
+    - Resume: resume.md
     - Projects: 
         - gis-projects.md
         - django-projects.md
