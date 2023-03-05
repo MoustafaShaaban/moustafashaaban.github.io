@@ -54,19 +54,21 @@ Skills :  Python, JavaScript, HTML/CSS, SQL, PostgreSQL, Vue JS, Git/GitHub, Boo
 ## Projects
 -----------
 
-# Django Geoapp
+# Django Geoapp + Vue.js 3
 
 ###  Project Goals
 
 * Use Django admin site to import data from different sources (CSV, JSON, ...) into the database.
 
-* Use Folium to visualize data generated from Django Database on a Leaflet JS map.
+* Use the power of Folium to visualize data generated from Django Database on a Leaflet JS map.
 
 * Visualize data using Folium's Simple Markers.
 
-* Users can register for an account, login, and update their information (handled by Cookiecutter Django).
+* Users can register for an account, login, and update their information (handled by Cookiecutter Django)
 
 * Authenticated users can add, import, or export data using django forms.
+
+* Use Vue.js 3 (using Vite ) and axios to fetch the data from the backend and display it in a Bootstrap Table.
 
 
 ### Project Files

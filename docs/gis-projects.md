@@ -6,6 +6,7 @@ This section of the website contians my GIS projects.
 Currently it has some projects under the name of:
 
 * USA_Maps_and_Analysis
+
 * Web_GIS
 ------------------------
 #### The first project is an interactive web map visualizing the Public Schools in Seattle

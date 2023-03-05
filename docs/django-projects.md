@@ -11,6 +11,46 @@ Currently it has some projects under the name of:
 * [Django and folium](https://github.com/MoustafaShaaban/Django_and_Folium)
 
 -------------------------------------------------------------
+
+# Django Geoapp + Vue.js 3
+
+###  Project Goals
+
+* Use Django admin site to import data from different sources (CSV, JSON, ...) into the database.
+
+* Use the power of Folium to visualize data generated from Django Database on a Leaflet JS map.
+
+* Visualize data using Folium's Simple Markers.
+
+* Users can register for an account, login, and update their information (handled by Cookiecutter Django)
+
+* Authenticated users can add, import, or export data using django forms.
+
+* Use Vue.js 3 (using Vite ) and axios to fetch the data from the backend and display it in a Bootstrap Table.
+
+
+### Project Files
+
+* [Github](https://github.com/MoustafaShaaban/Django-Geoapp)
+
+### Project Preview
+
+* [Youtube](https://www.youtube.com/watch?v=dqDSYeppbGI)
+
+
+
+### Libraries and Packages used
+
+* [Django Web Framework](https://www.djangoproject.com/)
+
+* [django-import-export](https://django-import-export.readthedocs.io/en/latest/) package
+
+* [Folium](https://python-visualization.github.io/folium/)
+
+* [Cookiecutter Django](https://cookiecutter-django.readthedocs.io/en/latest/index.html)
+
+-------------------------------------
+
 ## Advanced Django Blog
 
 A project built with Django web framework and Bootstrap.
