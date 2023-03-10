@@ -1,4 +1,7 @@
 site_name: Moustafa Shaaban
+site_url: https://moustafashaaban.github.io/
+site_description: My personal website
+site_author: Moustafa Shaaban
 
 theme:
     name: material
@@ -11,7 +14,9 @@ theme:
         - navigation.expand
         - toc.follow
         - navigation.top
+        - navigation.footer
     
+
     palette: 
 
     # Palette toggle for light mode
@@ -33,7 +38,24 @@ nav:
     - Tutorials: tutorials/tutorials.md
 
 
+copyright: Copyright &copy; 2023 Moustafa Shaaban
+    
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/MoustafaShaaban
+        - icon: fontawesome/brands/linkedin
+          link: https://www.linkedin.com/in/moustafashaaban
+        - icon: fontawesome/brands/medium
+          link: https://medium.com/@moustafashaaban
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/_MoustafaShaban
+
+
 
 # Adding the git revision date plugin
 plugins:
     - search
+    - git-revision-date-localized:
+        type: date
+        enable_creation_date: true
