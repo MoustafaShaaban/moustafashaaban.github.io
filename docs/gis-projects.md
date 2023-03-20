@@ -8,8 +8,9 @@ Currently it has some projects under the name of:
 * USA_Maps_and_Analysis
 
 * Web_GIS
+
 ------------------------
-#### The first project is an interactive web map visualizing the Public Schools in Seattle
+## Project 1 is an interactive web map visualizing the Public Schools in Seattle
 
 * There are two versions of this project:
   * 1- Using the Python programming language.   (Folium)
@@ -23,7 +24,7 @@ Currently it has some projects under the name of:
 
 --------------------------------------------------------------------------------
 
-#### The second project contains interactive and static maps of the USA
+## Project 2 contains interactive and static maps of the USA
 
 * The interactive map shows a choropleth map of the population count in the USA by each state, and also shows some population studies like the population growth from 2010 to 2021.
 * This project was created by another python library called [Geopandas](https://geopandas.org/en/stable/index.html)
@@ -37,7 +38,7 @@ Currently it has some projects under the name of:
 
 --------------------------------------------------------------------------------
 
-#### The third project contian an interactive web map that display some data in Washington_DC like Hospitals, Libraries, Post offices, ...
+## Project 3 contian an interactive web map that display some data in Washington_DC like Hospitals, Libraries, Post offices, ...
 
 * This project is also create using [Folium](https://python-visualization.github.io/folium/)
 
@@ -45,7 +46,7 @@ Currently it has some projects under the name of:
 
 ------------------------------------------------------------------------------
 
-#### The fourth project contains an interactive web map built with ArcGIS JavaScript API
+## Project 4 contains an interactive web map built with ArcGIS JavaScript API
 
 * This project contains two mini sub project:
 

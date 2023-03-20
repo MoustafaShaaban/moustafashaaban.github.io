@@ -1,6 +1,6 @@
 ---
-title: Django and Folium Tutorial
-slug: Tutorials/Django/Django-and-Folium
+title: Using Django with Folium
+slug: Django-and-Folium
 ---
 
 
@@ -12,7 +12,6 @@ In this tutorial we will learn how to visualize data from Django database into a
 
 2. [Setting up the maps app](#app-setup)
 
-3. []
 
 ### Libraries and Packages used
 

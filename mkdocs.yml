@@ -33,8 +33,8 @@ theme:
 nav:
     - Resume: resume.md
     - Projects: 
-        - gis-projects.md
         - django-projects.md
+        - gis-projects.md
     - Tutorials: tutorials/tutorials.md
 
 

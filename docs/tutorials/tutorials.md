@@ -16,6 +16,8 @@
 ---------
 * [Create a Django project](Django/Create_Django_project/django_project.md)
 
+* [Using Django with Folium](Django/Django-and-Folium/Django-and-Folium.md)
+
 
 ## GIS
 -------
