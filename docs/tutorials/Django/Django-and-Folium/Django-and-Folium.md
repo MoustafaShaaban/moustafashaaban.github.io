@@ -1,10 +1,10 @@
 ---
 title: Using Django with Folium
-slug: Django-and-Folium
+slug: tutorials/Django/Django-and-Folium
 ---
 
 
-In this tutorial we will learn how to visualize data from Django database into an interactive web map.
+In this tutorial we will learn how to visualize data from Django database into an interactive web map using [Folium](https://python-visualization.github.io/folium/).
 
 # Table of contents
 
@@ -22,7 +22,7 @@ In this tutorial we will learn how to visualize data from Django database into a
 * [Folium](https://python-visualization.github.io/folium/)
 
 
-According to Folium's [Docs](https://python-visualization.github.io/folium/) `folium` makes it easy to visualize data that's been manipulated in Python on an interactive leaflet map. It enables both the binding of data to a map for `choropleth` visualizations as well as passing rich vector/raster/HTML visualizations as markers on the map.
+According to [Folium's Docs](https://python-visualization.github.io/folium/) `folium` makes it easy to visualize data that's been manipulated in Python on an interactive leaflet map. It enables both the binding of data to a map for `choropleth` visualizations as well as passing rich vector/raster/HTML visualizations as markers on the map.
 
 Let's get started.
 
@@ -31,36 +31,35 @@ Let's get started.
 Create Django project (If you haven't used Django before you can check this [tutorial](https://moustafashaaban.github.io/tutorials/Django/Create_Django_project/django_project/) to learn how to create a Django project) called backend.
 
 
-```console
-cd Desktop/
+```bash
+>>> cd Desktop/
 
-mkdir Django-and-Folium
+>>> mkdir Django-and-Folium
 
-cd Django-and-Folium
+>>> cd Django-and-Folium
 
-python -m venv venv
+>>> python -m venv venv
 
-source venv/bin/activate    *Linux or Git Bash on Windows*
+>>> source venv/bin/activate    *Linux or Git Bash on Windows*
 
-venv/Scripts/activate   *On Windows*
+>>> venv\Scripts\activate   *On Windows*
 
-python -m pip install django== 4.1.3 folium--0.14.0 django-import-export==3.1.0
+>>> python -m pip install django==4.1.3 django-crispy-forms folium==0.14.0
 
-django-admin startproject backend
+>>> django-admin startproject backend
 
-cd backend
+>>> cd backend
 
-python manage.py startapp maps
+>>> python manage.py startapp maps
 
-python manage.py startapp migrate
+>>> python manage.py startapp migrate
 
-python manage.py startapp createsuperuser
-
+>>> python manage.py startapp createsuperuser
 ```
 
 These commands will create a virtual environment and install the required libraries and packages for this project and create a new Django app called maps.
 
-Register the newly created app and the installed app for `django-import-export` package.
+Register the newly created app and `crispy_forms` app inside the installed apps settings.
 
 
 ```python
@@ -88,14 +87,6 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'   # This will create a "static" folder in the root folder of our project
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-```
-
-Now run the following command to collect static used for setting up `django-import-export` package.
-
-```console
-
-python manage.py collectstatic
-
 ```
 
 In this tutorial we will use an app-level url configurations, so the last thing we need to do in this step is to create a urls/py file and map it in our main project urls.py
@@ -174,9 +165,9 @@ After creating a Model we need to run the `makemigrations` command:
 
 ```console
 
-python manage.py makemigrations
+>>> python manage.py makemigrations
 
-python manage.py migrate
+>>> python manage.py migrate
 
 ```
 
