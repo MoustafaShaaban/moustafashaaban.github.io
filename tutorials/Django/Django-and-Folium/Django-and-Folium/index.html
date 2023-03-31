@@ -414,7 +414,7 @@
                   
 
 
-<p>In this tutorial we will learn how to visualize data from Django database into an interactive web map.</p>
+<p>In this tutorial we will learn how to visualize data from Django database into an interactive web map using <a href="https://python-visualization.github.io/folium/">Folium</a>.</p>
 <h1 id="table-of-contents">Table of contents</h1>
 <ol>
 <li>
@@ -436,11 +436,11 @@
 <p><a href="https://python-visualization.github.io/folium/">Folium</a></p>
 </li>
 </ul>
-<p>According to Folium's <a href="https://python-visualization.github.io/folium/">Docs</a> <code>folium</code> makes it easy to visualize data that's been manipulated in Python on an interactive leaflet map. It enables both the binding of data to a map for <code>choropleth</code> visualizations as well as passing rich vector/raster/HTML visualizations as markers on the map.</p>
+<p>According to <a href="https://python-visualization.github.io/folium/">Folium's Docs</a> <code>folium</code> makes it easy to visualize data that's been manipulated in Python on an interactive leaflet map. It enables both the binding of data to a map for <code>choropleth</code> visualizations as well as passing rich vector/raster/HTML visualizations as markers on the map.</p>
 <p>Let's get started.</p>
 <h2 id="project-setup">Project Setup <a name="project-setup"></a></h2>
 <p>Create Django project (If you haven't used Django before you can check this <a href="https://moustafashaaban.github.io/tutorials/Django/Create_Django_project/django_project/">tutorial</a> to learn how to create a Django project) called backend.</p>
-<pre><code class="language-console">&gt;&gt;&gt; cd Desktop/
+<pre><code class="language-bash">&gt;&gt;&gt; cd Desktop/
 
 &gt;&gt;&gt; mkdir Django-and-Folium
 
@@ -450,9 +450,9 @@
 
 &gt;&gt;&gt; source venv/bin/activate    *Linux or Git Bash on Windows*
 
-&gt;&gt;&gt; venv/Scripts/activate   *On Windows*
+&gt;&gt;&gt; venv\Scripts\activate   *On Windows*
 
-&gt;&gt;&gt; python -m pip install django== 4.1.3 folium--0.14.0 django-import-export==3.1.0
+&gt;&gt;&gt; python -m pip install django==4.1.3 django-crispy-forms folium==0.14.0
 
 &gt;&gt;&gt; django-admin startproject backend
 
@@ -463,10 +463,9 @@
 &gt;&gt;&gt; python manage.py startapp migrate
 
 &gt;&gt;&gt; python manage.py startapp createsuperuser
-
 </code></pre>
 <p>These commands will create a virtual environment and install the required libraries and packages for this project and create a new Django app called maps.</p>
-<p>Register the newly created app and the installed app for <code>django-import-export</code> package.</p>
+<p>Register the newly created app inside the installed apps settings.</p>
 <pre><code class="language-python">
 # backend/settings.py
 
