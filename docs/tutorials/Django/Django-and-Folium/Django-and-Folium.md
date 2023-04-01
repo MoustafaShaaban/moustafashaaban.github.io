@@ -6,6 +6,8 @@ slug: tutorials/Django/Django-and-Folium
 
 In this tutorial we will learn how to visualize data from Django database into an interactive web map using [Folium](https://python-visualization.github.io/folium/).
 
+You can find the source code of this tutorial on my Github account [here](https://github.com/MoustafaShaaban/Django-and-Folium-Tutorial/tree/main)
+
 # Table of contents
 
 1. [Setting up the project](#project-setup)
@@ -52,9 +54,9 @@ Create Django project (If you haven't used Django before you can check this [tut
 
 >>> python manage.py startapp maps
 
->>> python manage.py startapp migrate
+>>> python manage.py migrate
 
->>> python manage.py startapp createsuperuser
+>>> python manage.py createsuperuser
 ```
 
 These commands will create a virtual environment and install the required libraries and packages for this project and create a new Django app called maps.
@@ -75,16 +77,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # My Apps:
-    'maps.apps.maps',
+    'maps.apps.MapsConfig',
 
     # Other Apps
     'crispy_forms',
 ]
 
-# Also add the STATIC_ROOT settings in the bottom of the file:
+# Also choose a template pack for django-cripsy-forms settings in the bottom of the file:
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'   # This will create a "static" folder in the root folder of our project
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 ```
@@ -161,7 +161,24 @@ class Feature(models.Model):
         return f'{self.name}'
 
 ```
-After creating a Model we need to run the `makemigrations` command:
+
+
+Register the model in Django admin site:
+
+open `maps/admin.py` and add the following code:
+
+```python
+
+from django.contrib import admin
+
+from .models import Feature
+
+
+admin.site.register(Feature)
+```
+
+
+After creating a Model and registering it, we need to run the `makemigrations` command:
 
 ```console
 
@@ -204,7 +221,7 @@ def basemap(request):
         locations = [feature.latitude, feature.longitude]
         folium.Marker(
             locations,
-            tooltip= str(feature.name) + ", " + str(feature.type),
+            tooltip= str(feature.name),
             popup= feature.description
         ).add_to(features_layer)
 
@@ -314,7 +331,7 @@ We will Django template inheritance so, both the `map.html` and `create_feature.
 `templates/base.html`
 
 ```html
-<!-- templates/base.html -->
+<!-- maps/templates/base.html -->
 
 {% load static %}
 <!DOCTYPE html>
@@ -380,10 +397,10 @@ We will Django template inheritance so, both the `map.html` and `create_feature.
 
 ```
 
-`templates/map.html`
+`maps/templates/map.html`
 
 ```html
-<!-- templates/map.html -->
+<!-- maps/templates/map.html -->
 
 {% extends 'base.html' %}
 {% block title %}Django and Folium{% endblock title %}
@@ -395,10 +412,10 @@ We will Django template inheritance so, both the `map.html` and `create_feature.
 ```
 
 
-`templates/map.html`
+`maps/templates/create_feature.html`
 
 ```html
-<!-- templates/create_feature.html -->
+<!-- maps/templates/create_feature.html -->
 
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
