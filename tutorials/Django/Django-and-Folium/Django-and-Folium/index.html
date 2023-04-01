@@ -415,6 +415,7 @@
 
 
 <p>In this tutorial we will learn how to visualize data from Django database into an interactive web map using <a href="https://python-visualization.github.io/folium/">Folium</a>.</p>
+<p>You can find the source code of this tutorial on my Github account <a href="https://github.com/MoustafaShaaban/Django-and-Folium-Tutorial/tree/main">here</a></p>
 <h1 id="table-of-contents">Table of contents</h1>
 <ol>
 <li>
@@ -460,9 +461,9 @@
 
 &gt;&gt;&gt; python manage.py startapp maps
 
-&gt;&gt;&gt; python manage.py startapp migrate
+&gt;&gt;&gt; python manage.py migrate
 
-&gt;&gt;&gt; python manage.py startapp createsuperuser
+&gt;&gt;&gt; python manage.py createsuperuser
 </code></pre>
 <p>These commands will create a virtual environment and install the required libraries and packages for this project and create a new Django app called maps.</p>
 <p>Register the newly created app and <code>crispy_forms</code> app inside the installed apps settings.</p>
@@ -478,16 +479,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # My Apps:
-    'maps.apps.maps',
+    'maps.apps.MapsConfig',
 
     # Other Apps
     'crispy_forms',
 ]
 
-# Also add the STATIC_ROOT settings in the bottom of the file:
+# Also choose a template pack for django-cripsy-forms settings in the bottom of the file:
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'   # This will create a &quot;static&quot; folder in the root folder of our project
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 </code></pre>
@@ -561,7 +560,17 @@ class Feature(models.Model):
         return f'{self.name}'
 
 </code></pre>
-<p>After creating a Model we need to run the <code>makemigrations</code> command:</p>
+<p>Register the model in Django admin site:</p>
+<p>open <code>maps/admin.py</code> and add the following code:</p>
+<pre><code class="language-python">
+from django.contrib import admin
+
+from .models import Feature
+
+
+admin.site.register(Feature)
+</code></pre>
+<p>After creating a Model and registering it, we need to run the <code>makemigrations</code> command:</p>
 <pre><code class="language-console">
 &gt;&gt;&gt; python manage.py makemigrations
 
@@ -597,7 +606,7 @@ def basemap(request):
         locations = [feature.latitude, feature.longitude]
         folium.Marker(
             locations,
-            tooltip= str(feature.name) + &quot;, &quot; + str(feature.type),
+            tooltip= str(feature.name),
             popup= feature.description
         ).add_to(features_layer)
 
@@ -692,7 +701,7 @@ urlpatterns = [
 <p>Then create three HTML files inside it <code>base.html</code>, <code>map.html</code>, and <code>create_feature.html</code></p>
 <p>We will Django template inheritance so, both the <code>map.html</code> and <code>create_feature.html</code> will inherit its content from <code>base.html</code>.</p>
 <p><code>templates/base.html</code></p>
-<pre><code class="language-html">&lt;!-- templates/base.html --&gt;
+<pre><code class="language-html">&lt;!-- maps/templates/base.html --&gt;
 
 {% load static %}
 &lt;!DOCTYPE html&gt;
@@ -757,8 +766,8 @@ urlpatterns = [
 &lt;/html&gt;
 
 </code></pre>
-<p><code>templates/map.html</code></p>
-<pre><code class="language-html">&lt;!-- templates/map.html --&gt;
+<p><code>maps/templates/map.html</code></p>
+<pre><code class="language-html">&lt;!-- maps/templates/map.html --&gt;
 
 {% extends 'base.html' %}
 {% block title %}Django and Folium{% endblock title %}
@@ -768,8 +777,8 @@ urlpatterns = [
 {% endblock map %}
 
 </code></pre>
-<p><code>templates/map.html</code></p>
-<pre><code class="language-html">&lt;!-- templates/create_feature.html --&gt;
+<p><code>maps/templates/create_feature.html</code></p>
+<pre><code class="language-html">&lt;!-- maps/templates/create_feature.html --&gt;
 
 {% extends &quot;base.html&quot; %}
 {% load crispy_forms_tags %}
@@ -796,7 +805,7 @@ urlpatterns = [
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 20, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 31, 2023</span>
       
         <br>
         Created:
