@@ -103,6 +103,8 @@ A project built with Django web framework and Bootstrap.
 
 * Authenticated users can:
 
+    * Access a GraphQL endpoint and Run several Quries and Mutations.
+
     * Create, Read, Update and Delete (CRUD) blog posts on the website.
 
     * Add comments on blog posts, but the comments will not be shown until the website admin approves it.
@@ -262,8 +264,11 @@ A project built with Django web framework and Bootstrap
 * HTML5
 * CSS3
 * JavaScript
+* Backend development
 * Django web framework
 * Django rest framework
+* Rest APIs
+* GraphQL
 * Vue JS
 * Bootstrap 5
 * Vite build tool
