@@ -5,6 +5,8 @@ Here you can find my resume, projects and tutorials about GIS, Python, and Djang
 
 * [Resume](resume.md)
 
+* [GIS Resume](gis-resume.md)
+
 * [Tutorials](tutorials/tutorials.md)
 
 * [GIS Projects](gis-projects.md)
