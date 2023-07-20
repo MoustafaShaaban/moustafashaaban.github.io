@@ -12,3 +12,5 @@ Here you can find my resume, projects and tutorials about GIS, Python, and Djang
 * [GIS Projects](gis-projects.md)
 
 * [Django Projects](django-projects.md)
+
+* [Project Reviews](project-reviews/project-reviews.md)

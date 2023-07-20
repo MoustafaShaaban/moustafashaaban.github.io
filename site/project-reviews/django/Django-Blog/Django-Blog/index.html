@@ -479,8 +479,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
-    Table of Contents:
+  <a href="#main-project-files-on-github" class="md-nav__link">
+    Main Project Files on Github
   </a>
   
 </li>
@@ -518,6 +518,131 @@
     GraphQL Review
   </a>
   
+    <nav class="md-nav" aria-label="GraphQL Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alltags" class="md-nav__link">
+    allTags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createtag" class="md-nav__link">
+    createTag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updatetag" class="md-nav__link">
+    updateTag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletetag" class="md-nav__link">
+    deleteTag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createpost" class="md-nav__link">
+    createPost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updatepost" class="md-nav__link">
+    updatePost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletepost" class="md-nav__link">
+    deletePost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createcomment" class="md-nav__link">
+    createComment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updatecomment" class="md-nav__link">
+    updateComment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletecomment" class="md-nav__link">
+    deleteComment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allposts" class="md-nav__link">
+    allPosts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allpostswithfilters" class="md-nav__link">
+    allPostsWithFilters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postsbytag" class="md-nav__link">
+    postsByTag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postsbytauthor" class="md-nav__link">
+    postsByTAuthor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postbytitle" class="md-nav__link">
+    postByTitle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commentsbypost" class="md-nav__link">
+    commentsByPost
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-api-review" class="md-nav__link">
+    REST API Review
+  </a>
+  
 </li>
       
     </ul>
@@ -536,7 +661,8 @@
 
 
 <div><h1 id="advanced-django-blog-with-rest-api-and-graphql">Advanced Django Blog with Rest API and GraphQL</h1>
-<p>In this article I will talk about a project I created using the following frameworks:</p>
+<h3 id="main-project-files-on-github"><a href="https://github.com/MoustafaShaaban/Advanced_Django_Blog">Main Project Files on Github</a></h3>
+<p>In this article I will review a project I created using the following frameworks:</p>
 <ul>
 <li><a href="https://www.djangoproject.com/">Django Web Framework</a>.</li>
 <li><a href="https://www.django-rest-framework.org">Django REST Framework</a>.</li>
@@ -544,7 +670,6 @@
 <li><a href="https://github.com/cookiecutter/cookiecutter-django">Cookiecutter Django</a>.</li>
 </ul>
 <hr>
-<h3 id="table-of-contents">Table of Contents:</h3>
 <ol>
 <li>Project Description.</li>
 <li>User Story.</li>
@@ -607,7 +732,7 @@
 <h3 id="to-get-started-with-this-project">To get started with this project</h3>
 <ul>
 <li>
-<p>Make sure that Docker and docker-compose are installed in your system.</p>
+<p>Make sure that <a href="https://www.docker.com/">Docker</a> and <a href="https://docs.docker.com/compose/">docker-compose</a> are installed in your system.</p>
 </li>
 <li>
 <p>Clone the repository: git clone https://github.com/MoustafaShaaban/Advanced_Django_Blog.git</p>
@@ -623,6 +748,7 @@
 <ul>
 <li>Create the database by running the following commands:</li>
 </ul>
+<p><code>docker-compose -f local.yml run --rm django python manage.py makemigrations</code></p>
 <p><code>docker-compose -f local.yml run --rm django python manage.py migrate</code></p>
 <ul>
 <li>Create a super user:</li>
@@ -635,40 +761,445 @@
 <ul>
 <li>Open the web browser and go to <code>http://localhost:8000/</code> to see the results.</li>
 </ul>
-<p><div class="video-container"><video style="width:50%" muted controls alt="type:video"><source src="../reviews/Start-Project.mp4" type="video/mp4"></source></video></div></p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Start-Project.mp4" type="video/mp4"></source></video></div></p>
 <p>Now, we can start reviewing our project.</p>
 <hr>
 <h3 id="main-project-review">Main Project Review</h3>
 <ul>
 <li>Adding a new blog post:</li>
 </ul>
-<p><div class="video-container"><video style="width:50%" muted controls alt="type:video"><source src="../reviews/Add-Post.mp4" type="video/mp4"></source></video></div></p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Add-Post.mp4" type="video/mp4"></source></video></div></p>
 <ul>
 <li>Updating a blog post:</li>
 </ul>
-<p><div class="video-container"><video style="width:50%" muted controls alt="type:video"><source src="../reviews/Main-Update-Post.mp4" type="video/mp4"></source></video></div></p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Main-Update-Post.mp4" type="video/mp4"></source></video></div></p>
 <ul>
 <li>Delete a blog post:</li>
 </ul>
-<p><div class="video-container"><video style="width:50%" muted controls alt="type:video"><source src="../reviews/Main-Delete-Post.mp4" type="video/mp4"></source></video></div></p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Main-Delete-Post.mp4" type="video/mp4"></source></video></div></p>
 <ul>
 <li>Protect blog posts so that only the author of the post who can modify it:</li>
 </ul>
-<p><div class="video-container"><video style="width:50%" muted controls alt="type:video"><source src="../reviews/Protect-Posts.mp4" type="video/mp4"></source></video></div></p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Protect-Posts.mp4" type="video/mp4"></source></video></div></p>
 <ul>
 <li>Add blog posts to favorite posts:</li>
 </ul>
-<p><div class="video-container"><video style="width:50%" muted controls alt="type:video"><source src="../reviews/Favorite-Posts.mp4" type="video/mp4"></source></video></div></p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Favorite-Posts.mp4" type="video/mp4"></source></video></div></p>
 <ul>
 <li>List all tags and its related posts: </li>
 </ul>
-<p><div class="video-container"><video style="width:50%" muted controls alt="type:video"><source src="../reviews/Tags.mp4" type="video/mp4"></source></video></div></p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Tags.mp4" type="video/mp4"></source></video></div></p>
 <ul>
 <li>Search for blog posts:</li>
 </ul>
-<p><div class="video-container"><video style="width:50%" muted controls alt="type:video"><source src="../reviews/Search.mp4" type="video/mp4"></source></video></div></p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Search.mp4" type="video/mp4"></source></video></div></p>
 <hr>
-<h3 id="graphql-review">GraphQL Review</h3></div>
+<h3 id="graphql-review">GraphQL Review</h3>
+<p>Currently, the project has the following GraphQL Queries and Mutations:</p>
+<h4 id="alltags">allTags</h4>
+<p>Lists all the available tags in the website:</p>
+<pre><code class="language-gql">
+query ReturnAllTags {
+  allTags {
+    id
+    name
+    slug
+  }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/All-Tags.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="createtag">createTag</h4>
+<p>This mutation will do the following: </p>
+<ol>
+<li>
+<p>Create a tag called Python, it takes only one input &gt;&gt; the tag name, then, Django will use slugify to create a slug for the tag before saving it to the database.</p>
+</li>
+<li>
+<p>Return all the information about this tag (id, name, and slug):</p>
+</li>
+</ol>
+<pre><code class="language-gql">
+mutation CreateTag {
+  createTag(input: {name: "Python"}) {
+    tag {
+      id
+      name
+      slug
+    }
+  }
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Create-Tag.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="updatetag">updateTag</h4>
+<p>This mutation will do the following: </p>
+<ol>
+<li>
+<p>Update the tag we need by its slug. so we first need to get the slug of the tag we need to update, then pass in the new name we want to.</p>
+</li>
+<li>
+<p>Return all the information about this tag (id, name, and slug):</p>
+</li>
+</ol>
+<pre><code class="language-gql">
+mutation UpdateTag {
+  updateTag(slug: "python", name: "python") {
+    tag {
+      id
+      name
+      slug
+    }
+  }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Update-Tag.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="deletetag">deleteTag</h4>
+<p>This mutation will do the following: </p>
+<ol>
+<li>
+<p>Select the tag by its id then, deletes it.</p>
+</li>
+<li>
+<p>Return a success Boolean, if its True, then the tag is deleted successfully:</p>
+</li>
+</ol>
+<pre><code class="language-gql">
+mutation DeleteTag {
+  deleteTag(id: 2) {
+    success
+  }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Delete-Tag.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="createpost">createPost</h4>
+<p>This mutation will do the following: </p>
+<ol>
+<li>
+<p>Create a new blog post, it takes the following inputs =&gt; title, content and tags.</p>
+</li>
+<li>
+<p>Return an instance of the post and some of its information like post id, title, slug, author, tag, content and comments:</p>
+</li>
+</ol>
+<pre><code class="language-gql">
+mutation createPost {
+  createPost(input: {
+    title: "Post 1",
+    content: "Post 1 content",
+    tags: [
+        { slug: "python" },
+    ]
+  }) {
+    post {
+        id
+        title
+        slug
+        author {
+            username
+        }
+        tag {
+            name
+            slug
+        }
+        content
+        comments {
+            comment
+            user {
+                username
+            }
+        }
+    }
+  }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Create-Post.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="updatepost">updatePost</h4>
+<p>This mutation is protected, meaning that, only the post author who can update it, If another user tried to update the post, a GraphQL Error will be raised. and it does the following: </p>
+<ol>
+<li>
+<p>Update a blog post, it selects the post by its id, then takes the following inputs =&gt; title, content and tags.</p>
+</li>
+<li>
+<p>Return an instance of the post and some of its information like post id, title, slug, author, tag, content and comments:</p>
+</li>
+</ol>
+<pre><code class="language-gql">
+mutation updatePost {
+  updatePost(
+    id: 1
+    input: {title: "Post 1 updated", content: "Post 1 content updated", tags: [{slug: "python"}, {slug: "django"}]}
+  ) {
+    post {
+      title
+      tag {
+        name
+        slug
+      }
+      content
+    }
+  }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Update-Post.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="deletepost">deletePost</h4>
+<p>This mutation is protected, meaning that, only the post author who can delete it, If another user tried to delete the post, a GraphQL Error will be raised. and it does the following: </p>
+<ol>
+<li>
+<p>Select the post by its id, then deletes it.</p>
+</li>
+<li>
+<p>Return a success Boolean, if its True, then the post is deleted successfully:</p>
+</li>
+</ol>
+<pre><code class="language-gql">
+mutation deletePost {
+  deletePost(id: 1) {
+    success
+  }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Delete-Post.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="createcomment">createComment</h4>
+<p>This mutation will do the following: </p>
+<ol>
+<li>
+<p>Adds a new comment to a blog post, it takes the following inputs =&gt; postSlug, email and comment.</p>
+</li>
+<li>
+<p>Return an instance of comment and some of its information like comment id, user, email, comment and the post title which has this comment:</p>
+</li>
+</ol>
+<pre><code class="language-gql">
+mutation createComment {
+  createComment(
+    inputs: {postSlug: "post-1", email: "admin@admin.com", comment: "Great post"}
+  ) {
+    comment {
+      id
+      user {
+        username
+      }
+      email
+      comment
+      post {
+        title
+      }
+    }
+  }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Create-Comment.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="updatecomment">updateComment</h4>
+<p>This mutation is protected, meaning that, only the user who added this comment can update it, If another user tried to update the comment, a GraphQL Error will be raised. and it does the following: </p>
+<ol>
+<li>
+<p>Update a comment, it selects the comment by its id, then takes the following inputs =&gt; comment.</p>
+</li>
+<li>
+<p>Return an instance of the comment and some of its information like comment id and comment:</p>
+</li>
+</ol>
+<pre><code class="language-gql">
+mutation updateComment {
+  updateComment(id: 1, comment: "Great post keep it up") {
+    success
+    comment {
+        id
+        comment
+    }
+  }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Update-Comment.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="deletecomment">deleteComment</h4>
+<p>This mutation is protected, meaning that, only the user who added this comment can delete it, If another user tried to update the comment, a GraphQL Error will be raised. and it does the following: </p>
+<ol>
+<li>
+<p>Select the comment by its id, then deletes it.</p>
+</li>
+<li>
+<p>Return a success Boolean, if its True, then the comment is deleted successfully:</p>
+</li>
+</ol>
+<pre><code class="language-gql">
+mutation deleteComment {
+  deleteComment(id: 2) {
+    success
+  }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Delete-Comment.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="allposts">allPosts</h4>
+<p>This Query returns all the blog posts:</p>
+<pre><code class="language-gql">
+query AllPosts {
+    allPosts {
+        id
+        title
+        author {
+            username
+        }
+        tag {
+            name
+        }
+        content
+        comments {
+            comment
+            user {
+                username
+            }
+        }
+    }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/All-Posts.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="allpostswithfilters">allPostsWithFilters</h4>
+<p>This is a GraphQL Relay Mutation which uses Django-Filter package to filter the posts. Here, we return the posts which its title contains the number 1:</p>
+<pre><code class="language-gql">
+query AllPostsWithFilters {
+    allPostsWithFilters(title_Icontains: "1") {
+        edges {
+            node {
+                id
+                title
+                author {
+                    username
+                }
+            }
+        }
+    }
+}
+
+</code></pre>
+<p>We can also filter the blog posts by content, and display specific number of posts. (Check the GraphQL Docs at the following project url: http://127.0.0.1:8000/graphql/  )</p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/All-Posts-with-Filters.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="postsbytag">postsByTag</h4>
+<p>This Query return all the posts which has the provided tag.</p>
+<pre><code class="language-gql">
+query PostsByTag {
+    postsByTag(tag: "python") {
+        id
+        title
+        author {
+            username
+        }
+        tag {
+            name
+        }
+        content
+        comments {
+            comment
+            user {
+                username
+            }
+        }
+    }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Posts-By-Tag.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="postsbytauthor">postsByTAuthor</h4>
+<p>This Query return all the posts which has the provided author username.</p>
+<pre><code class="language-gql">
+query PostsByAuthor {
+    postsByAuthor(author: "admin") {
+        id
+        title
+        author {
+            username
+        }
+        tag {
+            name
+        }
+        content
+        comments {
+            comment
+            user {
+                username
+            }
+        }
+    }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Posts-By-Author.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="postbytitle">postByTitle</h4>
+<p>This Query returns all the posts filtered by its title (This is not a GraphQL Relay Query like the one above)</p>
+<pre><code class="language-gql">query PostsByTitle {
+    postByTitle(title: "Post") {
+        id
+        title
+        author {
+            username
+        }
+        tag {
+            name
+        }
+        content
+        comments {
+            user {
+                username
+            }
+            comment
+        }
+    }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Posts-By-Title.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h4 id="commentsbypost">commentsByPost</h4>
+<p>This Query return all the comments on a specific blog post.</p>
+<pre><code class="language-gql">
+query CommentsByPost {
+    commentsByPost(postTitle: "Post") {
+        id
+        comment
+        email
+        user {
+            username
+        }
+        post {
+            title
+            author {
+                username
+            }
+        }
+    }
+}
+
+</code></pre>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Comments-by-Post.mp4" type="video/mp4"></source></video></div></p>
+<hr>
+<h3 id="rest-api-review">REST API Review</h3>
+<p>The REST API has the same functionality as the main website, It uses Django REST Framework Viewsets and Routers to allow users to perform Create, Read, Update and Delete (CURD) operations.</p>
+<p>Also It uses Cookiecutter Django's REST API Documentation using Swagger API.</p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Rest-API-Docs.mp4" type="video/mp4"></source></video></div></p>
+<p>I changed the default way to retrieve the blog post detail information, Instead of having to provide the post id, you can uses the post slug:</p>
+<p><div class="video-container"><video style="width:100%" muted controls alt="type:video"><source src="../reviews/Rest-API-Root.mp4" type="video/mp4"></source></video></div></p></div>
 
   <hr>
 <div class="md-source-file">
