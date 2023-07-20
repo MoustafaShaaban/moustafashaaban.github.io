@@ -1,7 +1,7 @@
 # Django Protfolio
 ---------------
 
-This section of the website contians my Django projects.
+This section of the website contains my Django projects.
 
 Currently it has some projects under the name of:
 * [Advanced Django Blog](https://github.com/MoustafaShaaban/Advanced_Django_Blog)
@@ -61,7 +61,7 @@ Project Goals
 
 * Authenticated users can:
 
-    * Access a GraphQL endpoint and Run several Quries and Mutations.
+    * Access a GraphQL endpoint and Run several Queries and Mutations.
 
     * Create, Read, Update and Delete (CRUD) blog posts on the website.
 
@@ -82,15 +82,15 @@ Project preview
 
 Project Description:
 
-This project is a Django project called `backend` and it has two registered apps and one third-party app.
+This project is a Django project called `blog_backend` and it has four registered apps and one third-party app.
 
-    * The `blog` app which contians an app-level templates and urls, used for most of the 
-    functionalities of our app, like, models, forms, views, urls, and custom template tags.
+* The `blog` app which contains an app-level templates and urls, used for most of the functionalities of our app, like, models, forms, views, urls, and custom template tags.
 
-    * The `users` app which uses `django.contrib.auth.urls` to allow users register 
-    and login to thier accounts.
+* The `api` app which contains the Django Rest Framework integration used to build a REST API.
 
-    * `crispy forms` third-party app which makes beautify django forms design.
+* The `graphql_app` which contains the Graphene Django integration used to build a GraphQL endpoint.
+    
+* The `users` app which uses `django.contrib.auth.urls` to allow users register and login to their accounts.
 
 
 What could you learn from this project?
@@ -107,16 +107,24 @@ What could you learn from this project?
 
 * How to protect your post so that only you who can modify or delete it.
 
-* Throw a 403 forbidden page to any user who try to guss the URL to change something they are not authorized to do.
+* Throw a 403 forbidden page to any user who try to guess the URL to change something they are not authorized to do.
 
 * Create a search form on your website.
 
-* And many more.
+* Use a REST API endpoint.
+
+* Use Graphene Django to add a GraphQL endpoint and use to run several Queries and Mutations.
 
 
-Libraries and Packages used
+Libraries and Packages used:
 
 * [Django Web Framework](https://www.djangoproject.com/)
+
+* [Django REST Framework](https://www.django-rest-framework.org)
+
+* [Graphene Django](https://docs.graphene-python.org/projects/django/en/latest/)
+
+* [Cookiecutter Django](https://github.com/cookiecutter/cookiecutter-django)
 
 * [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) package
 

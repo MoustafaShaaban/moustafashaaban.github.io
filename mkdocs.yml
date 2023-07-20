@@ -36,10 +36,12 @@ nav:
     - Projects: 
         - django-projects.md
         - gis-projects.md
+    - Project Reviews:
+      - project-reviews/project-reviews.md
     - Tutorials: tutorials/tutorials.md
 
 
-copyright: Copyright &copy; 2023 Moustafa Shaaban
+copyright: Copyright &copy; 2023 <a href="https://github.com/MoustafaShaaban" target="_blank" rel="noopener">Moustafa Shaaban</a>
     
 extra:
     social:
@@ -60,3 +62,9 @@ plugins:
     - git-revision-date-localized:
         type: date
         enable_creation_date: true
+    - mkdocs-video:
+        is_video: True
+        video_muted: True
+        video_controls: True
+        css_style:
+          width: "50%"
