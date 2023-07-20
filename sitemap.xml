@@ -2,112 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://moustafashaaban.github.io/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/django-projects/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/gis-projects/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/gis-resume/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/resume/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://moustafashaaban.github.io/project-reviews/project-reviews/</loc>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://moustafashaaban.github.io/project-reviews/django/Django-Blog/Django-Blog/</loc>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/tutorials/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/Django/django/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/Django/Create_Django_project/django_project/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/Django/Django-and-Folium/Django-and-Folium/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/GIS/gis/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/GIS/Network_Analysis/QGIS3/1-point-to-point-shortest-path/steps/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/GIS/Network_Analysis/QGIS3/2-point-to-point-fastest-path/steps/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/GIS/Network_Analysis/QGIS3/3-service-area-from-layer/steps/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/GIS/Spatial_Databases/Create_PostGIS_Database/postgresql_and_postgis/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/GIS/Spatial_Databases/PostgreSQL_and_PostGIS/postgresql_and_postgis/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/GIS/Spatial_Databases/SpatiaLite/spatialite/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/General/general/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/General/1-Installing_Python/python/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/General/2-Installing_Anaconda/anaconda/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/General/3-Creating_Anaconda_Environment/anaconda_environment/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/General/4-Install_VS_Code/vs_code/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://moustafashaaban.github.io/tutorials/General/5-Creating_Virtual_Environment/virtual_environment/</loc>
-         <lastmod>2023-04-24</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
