@@ -33,17 +33,17 @@ analysis projects about spatial and non-spatial data.
 ------------
 #### Data Entry
   * Elsadek for Real estate valuation
-  * Nov 2019 - May 2022 (2 years 7 months)
+  * Nov 2019 - Nov 2023
 
 #### Marine surveyor assistant
   
   * Misr Marine for Surveys and Services
-  * Feb 2019 - May 2019 (4 months)
+  * Feb 2019 - May 2019
 
 #### Customer Service Representative
 
   * ECCO Outsourcing
-  * Sep 2018 - Jan 2019 (5 months)
+  * Sep 2018 - Jan 2019
 
 ------------
 
