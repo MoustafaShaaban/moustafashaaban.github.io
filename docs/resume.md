@@ -268,8 +268,9 @@ A project built with Django web framework and Bootstrap
 * Django web framework
 * Django rest framework
 * Rest APIs
-* GraphQL
+* GraphQL (Graphene Python)
 * Vue JS
 * Bootstrap 5
 * Vite build tool
 * Axios
+* Apollo GraphQL Client
