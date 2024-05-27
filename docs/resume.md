@@ -28,17 +28,12 @@ Skills :  Python, JavaScript, HTML/CSS, SQL, PostgreSQL, Vue JS, Git/GitHub, Boo
 ------------
 #### Data Entry
   * Elsadek for Real estate valuation
-  * Nov 2019 - Nov 2023
 
 #### Marine surveyor assistant
-  
   * Misr Marine for Surveys and Services
-  * Feb 2019 - May 2019
 
 #### Customer Service Representative
-
   * ECCO Outsourcing
-  * Sep 2018 - Jan 2019
 
 ------------
 
@@ -47,7 +42,7 @@ Skills :  Python, JavaScript, HTML/CSS, SQL, PostgreSQL, Vue JS, Git/GitHub, Boo
 
 #### Alexandria University:
 
-* Bachelor's degree, from Faculty of Arts, Department of Geography and Geographic Information Systems, Division of Survey and Maps. (2014 - 2018)
+* Bachelor's degree, from Faculty of Arts, Department of Geography and Geographic Information Systems, Division of Survey and Maps.
 
 -----------------------------------------------------------------
 
