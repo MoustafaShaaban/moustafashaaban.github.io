@@ -1,4 +1,4 @@
-# Django Protfolio
+# Django Portfolio
 ---------------
 
 This section of the website contains my Django projects.

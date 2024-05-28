@@ -2,8 +2,8 @@
 
 # Moustafa Shaaban Abdelaziz
 
-* Date of Birth: 17-03-1996
-* Address: Al Ibrahimia, Alexandria, Egypt
+* Year of Birth: 1996
+* Address: Alexandria, Egypt
 -----------------------------------------------------------------
 ## Contact
 ---------
@@ -33,17 +33,14 @@ analysis projects about spatial and non-spatial data.
 ------------
 #### Data Entry
   * Elsadek for Real estate valuation
-  * Nov 2019 - Nov 2023
 
 #### Marine surveyor assistant
   
   * Misr Marine for Surveys and Services
-  * Feb 2019 - May 2019
 
 #### Customer Service Representative
 
   * ECCO Outsourcing
-  * Sep 2018 - Jan 2019
 
 ------------
 

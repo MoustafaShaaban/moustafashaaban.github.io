@@ -1,4 +1,4 @@
-# GIS Protfolio
+# GIS Portfolio
 ---------------
 
 This section of the website contians my GIS projects.

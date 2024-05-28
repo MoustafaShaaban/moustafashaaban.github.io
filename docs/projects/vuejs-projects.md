@@ -1,4 +1,4 @@
-# Vue JS Protfolio
+# Vue JS Portfolio
 ---------------
 
 This section contains my Vue JS projects.
