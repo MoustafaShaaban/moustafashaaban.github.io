@@ -4,25 +4,23 @@ site_description: My personal website
 site_author: Moustafa Shaaban
 
 theme:
-    name: material
-    features:
-        - navigation.instant
-        - navigation.tracking
-        - navigation.tabs
-        - navigation.tabs
-        - navigation.tabs.sticky
-        - navigation.expand
-        - toc.follow
-        - navigation.top
-        - navigation.footer
-    
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - toc.follow
+    - navigation.top
+    - navigation.footer
 
-    palette: 
-
+  palette:
     # Palette toggle for light mode
     - scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
 
     # Palette toggle for dark mode
@@ -31,40 +29,38 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 nav:
-    - Resume: resume.md
-    - GIS Resume: gis-resume.md
-    - Projects: 
-        - django-projects.md
-        - gis-projects.md
-    - Project Reviews:
-      - project-reviews/project-reviews.md
-    - Tutorials: tutorials/tutorials.md
-
+  - Resume: resume.md
+  - GIS Resume: gis-resume.md
+  - Projects:
+    - projects/vuejs-projects.md
+    - projects/django-projects.md
+    - projects/gis-projects.md
+  - Project Reviews:
+    - project-reviews/project-reviews.md
+  - Tutorials: tutorials/tutorials.md
 
 copyright: Copyright &copy; 2023 <a href="https://github.com/MoustafaShaaban" target="_blank" rel="noopener">Moustafa Shaaban</a>
-    
+
 extra:
-    social:
-        - icon: fontawesome/brands/github
-          link: https://github.com/MoustafaShaaban
-        - icon: fontawesome/brands/linkedin
-          link: https://www.linkedin.com/in/moustafashaaban
-        - icon: fontawesome/brands/medium
-          link: https://medium.com/@moustafashaaban
-        - icon: fontawesome/brands/twitter
-          link: https://twitter.com/_MoustafaShaban
-
-
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MoustafaShaaban
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/moustafashaaban
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@moustafashaaban
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/_MoustafaShaban
 
 # Adding the git revision date plugin
 plugins:
-    - search
-    - git-revision-date-localized:
-        type: date
-        enable_creation_date: true
-    - mkdocs-video:
-        is_video: True
-        video_muted: True
-        video_controls: True
-        css_style:
-          width: "100%"
+  - search
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+  - mkdocs-video:
+      is_video: True
+      video_muted: True
+      video_controls: True
+      css_style:
+        width: "100%"
