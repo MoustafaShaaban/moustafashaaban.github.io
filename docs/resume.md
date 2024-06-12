@@ -49,62 +49,64 @@ Skills :  Python, JavaScript, HTML/CSS, SQL, PostgreSQL, Vue JS, Git/GitHub, Boo
 ## Projects
 -----------
 
-# Django Geoapp + Vue.js 3
-
-###  Project Goals
-
-* Use Django admin site to import data from different sources (CSV, JSON, ...) into the database.
-
-* Use the power of Folium to visualize data generated from Django Database on a Leaflet JS map.
-
-* Visualize data using Folium's Simple Markers.
-
-* Users can register for an account, login, and update their information (handled by Cookiecutter Django)
-
-* Authenticated users can add, import, or export data using django forms.
-
-* Use Vue.js 3 (using Vite ) and axios to fetch the data from the backend and display it in a Bootstrap Table.
-
-
-### Project Files
-
-* [Github](https://github.com/MoustafaShaaban/Django-Geoapp)
-
-### Project Preview
-
-* [Youtube](https://www.youtube.com/watch?v=dqDSYeppbGI)
-
-
-
-### Libraries and Packages used
-
-* [Django Web Framework](https://www.djangoproject.com/)
-
-* [django-import-export](https://django-import-export.readthedocs.io/en/latest/) package
-
-* [Folium](https://python-visualization.github.io/folium/)
-
-* [Cookiecutter Django](https://cookiecutter-django.readthedocs.io/en/latest/index.html)
-
--------------------------------------
-
 # Advanced Django Blog
 
-A project built with Django web framework and Bootstrap.
+A blog project built using 
+
+  [Django Web Framework](https://www.djangoproject.com/), 
+  [Django REST Framework](https://www.django-rest-framework.org), 
+  [Graphene Django](https://docs.graphene-python.org/projects/django/en/latest/), 
+  [Cookiecutter Django](https://github.com/cookiecutter/cookiecutter-django),
+  [HTMX](https://htmx.org/),
+  [Vue.js 3](https://vuejs.org/),
+  [Quasar Framework](https://quasar.dev/),
+  [Tanstack Vue Query](https://tanstack.com/query/latest/docs/vue/overview),
+  [Vue Apollo](https://apollo.vuejs.org/),
+  [Vue-multiselect](https://vue-multiselect.js.org/),
+
+
+[Full Review](https://moustafashaaban.github.io/project-reviews/django/Django-Blog/Django-Blog/)
 
 ###  Project Goals
-
-* All users can read or search for the posts on the blog.
 
 * Authenticated users can:
 
-    * Access a GraphQL endpoint and Run several Quries and Mutations.
+  * Access a GraphQL endpoint and run several Quries and CRUD Mutations.
 
-    * Create, Read, Update and Delete (CRUD) blog posts on the website.
+  * Access a Rest API endpoint and run CRUD operations.
 
-    * Add comments on blog posts, but the comments will not be shown until the website admin approves it.
+  * Create, Read, Update and Delete (CRUD) blog posts on the website.
 
-    * Access their profile which lists all their added blog posts.
+  * Add comments on blog posts, but the comments will not be visiable until the website admin approves it.
+
+  * Like Blog posts and Add them to their favorite list (using HTMX).
+
+  * Access their profile which lists all their blog posts and their favorite posts.
+
+
+* All users can read or search for the posts on the blog.
+
+* Users can access separate frontend project built using Vue.js 3, Tanstack-Vue-Query, Vue-Apollo and Quasar Framework which connects with django through Django Rest Framework using Session Authentication.
+
+* The frontend vue.js app also allows users to perform CRUD operations through connecting to a REST API and a GraphQL endpoints.
+
+Currently in Vue frontend users can:
+
+* Register for an account and log in to their account (users will be authenticated using Django Rest Framework Session Authentication).
+
+* Add tags to blog using a Rest API endpoint and GraphQL endpoint.
+
+* Perform CRUD operations to blog posts using both REST API and GraphQL.
+
+* Perform CRUD operations to add comments to blog posts using both REST API and GraphQL.
+
+* Add and remove posts to and form their favorite posts list.
+
+* Access pages that show their added blog posts and their favorite posts.
+
+* Search for blog posts by title and limiting the results using both REST API and GraphQL
+
+* All users can read or search for the posts on the blog.
 
 
 ### Project files
@@ -148,16 +150,47 @@ This project is a Django project called `backend` and it has two registered apps
 
 * And many more.
 
+-------------------------------------
+
+
+# Django Geoapp + Vue.js 3
+
+###  Project Goals
+
+* Use Django admin site to import data from different sources (CSV, JSON, ...) into the database.
+
+* Use the power of Folium to visualize data generated from Django Database on a Leaflet JS map.
+
+* Visualize data using Folium's Simple Markers.
+
+* Users can register for an account, login, and update their information (handled by Cookiecutter Django)
+
+* Authenticated users can add, import, or export data using django forms.
+
+* Use Vue.js 3 (using Vite ) and axios to fetch the data from the backend and display it in a Bootstrap Table.
+
+
+### Project Files
+
+* [Github](https://github.com/MoustafaShaaban/Django-Geoapp)
+
+### Project Preview
+
+* [Youtube](https://www.youtube.com/watch?v=dqDSYeppbGI)
+
+
 
 ### Libraries and Packages used
 
 * [Django Web Framework](https://www.djangoproject.com/)
 
-* [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) package
+* [django-import-export](https://django-import-export.readthedocs.io/en/latest/) package
 
-* UI components from the official [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/) website documentation.
+* [Folium](https://python-visualization.github.io/folium/)
+
+* [Cookiecutter Django](https://cookiecutter-django.readthedocs.io/en/latest/index.html)
+
 -------------------------------------
-
 # Django Todo App
 
 A project built with Django web framework and Bootstrap

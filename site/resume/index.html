@@ -882,82 +882,84 @@ University.</p>
 <hr>
 <h2 id="projects">Projects</h2>
 <hr>
-<h1 id="django-geoapp-vuejs-3">Django Geoapp + Vue.js 3</h1>
+<h1 id="advanced-django-blog">Advanced Django Blog</h1>
+<p>A blog project built using </p>
+<p><a href="https://www.djangoproject.com/">Django Web Framework</a>, 
+  <a href="https://www.django-rest-framework.org">Django REST Framework</a>, 
+  <a href="https://docs.graphene-python.org/projects/django/en/latest/">Graphene Django</a>, 
+  <a href="https://github.com/cookiecutter/cookiecutter-django">Cookiecutter Django</a>,
+  <a href="https://htmx.org/">HTMX</a>,
+  <a href="https://vuejs.org/">Vue.js 3</a>,
+  <a href="https://quasar.dev/">Quasar Framework</a>,
+  <a href="https://tanstack.com/query/latest/docs/vue/overview">Tanstack Vue Query</a>,
+  <a href="https://apollo.vuejs.org/">Vue Apollo</a>,
+  <a href="https://vue-multiselect.js.org/">Vue-multiselect</a>,</p>
+<p><a href="https://moustafashaaban.github.io/project-reviews/django/Django-Blog/Django-Blog/">Full Review</a></p>
 <h3 id="project-goals">Project Goals</h3>
 <ul>
 <li>
-<p>Use Django admin site to import data from different sources (CSV, JSON, ...) into the database.</p>
-</li>
-<li>
-<p>Use the power of Folium to visualize data generated from Django Database on a Leaflet JS map.</p>
-</li>
-<li>
-<p>Visualize data using Folium's Simple Markers.</p>
-</li>
-<li>
-<p>Users can register for an account, login, and update their information (handled by Cookiecutter Django)</p>
-</li>
-<li>
-<p>Authenticated users can add, import, or export data using django forms.</p>
-</li>
-<li>
-<p>Use Vue.js 3 (using Vite ) and axios to fetch the data from the backend and display it in a Bootstrap Table.</p>
-</li>
-</ul>
-<h3 id="project-files">Project Files</h3>
-<ul>
-<li><a href="https://github.com/MoustafaShaaban/Django-Geoapp">Github</a></li>
-</ul>
-<h3 id="project-preview">Project Preview</h3>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=dqDSYeppbGI">Youtube</a></li>
-</ul>
-<h3 id="libraries-and-packages-used">Libraries and Packages used</h3>
-<ul>
-<li>
-<p><a href="https://www.djangoproject.com/">Django Web Framework</a></p>
-</li>
-<li>
-<p><a href="https://django-import-export.readthedocs.io/en/latest/">django-import-export</a> package</p>
-</li>
-<li>
-<p><a href="https://python-visualization.github.io/folium/">Folium</a></p>
-</li>
-<li>
-<p><a href="https://cookiecutter-django.readthedocs.io/en/latest/index.html">Cookiecutter Django</a></p>
-</li>
-</ul>
-<hr>
-<h1 id="advanced-django-blog">Advanced Django Blog</h1>
-<p>A project built with Django web framework and Bootstrap.</p>
-<h3 id="project-goals_1">Project Goals</h3>
-<ul>
-<li>
-<p>All users can read or search for the posts on the blog.</p>
-</li>
-<li>
 <p>Authenticated users can:</p>
-<ul>
+</li>
 <li>
-<p>Access a GraphQL endpoint and Run several Quries and Mutations.</p>
+<p>Access a GraphQL endpoint and run several Quries and CRUD Mutations.</p>
+</li>
+<li>
+<p>Access a Rest API endpoint and run CRUD operations.</p>
 </li>
 <li>
 <p>Create, Read, Update and Delete (CRUD) blog posts on the website.</p>
 </li>
 <li>
-<p>Add comments on blog posts, but the comments will not be shown until the website admin approves it.</p>
+<p>Add comments on blog posts, but the comments will not be visiable until the website admin approves it.</p>
 </li>
 <li>
-<p>Access their profile which lists all their added blog posts.</p>
+<p>Like Blog posts and Add them to their favorite list (using HTMX).</p>
+</li>
+<li>
+<p>Access their profile which lists all their blog posts and their favorite posts.</p>
+</li>
+<li>
+<p>All users can read or search for the posts on the blog.</p>
+</li>
+<li>
+<p>Users can access separate frontend project built using Vue.js 3, Tanstack-Vue-Query, Vue-Apollo and Quasar Framework which connects with django through Django Rest Framework using Session Authentication.</p>
+</li>
+<li>
+<p>The frontend vue.js app also allows users to perform CRUD operations through connecting to a REST API and a GraphQL endpoints.</p>
 </li>
 </ul>
+<p>Currently in Vue frontend users can:</p>
+<ul>
+<li>
+<p>Register for an account and log in to their account (users will be authenticated using Django Rest Framework Session Authentication).</p>
+</li>
+<li>
+<p>Add tags to blog using a Rest API endpoint and GraphQL endpoint.</p>
+</li>
+<li>
+<p>Perform CRUD operations to blog posts using both REST API and GraphQL.</p>
+</li>
+<li>
+<p>Perform CRUD operations to add comments to blog posts using both REST API and GraphQL.</p>
+</li>
+<li>
+<p>Add and remove posts to and form their favorite posts list.</p>
+</li>
+<li>
+<p>Access pages that show their added blog posts and their favorite posts.</p>
+</li>
+<li>
+<p>Search for blog posts by title and limiting the results using both REST API and GraphQL</p>
+</li>
+<li>
+<p>All users can read or search for the posts on the blog.</p>
 </li>
 </ul>
-<h3 id="project-files_1">Project files</h3>
+<h3 id="project-files">Project files</h3>
 <ul>
 <li><a href="https://github.com/MoustafaShaaban/Advanced_Django_Blog">Github</a></li>
 </ul>
-<h3 id="project-preview_1">Project preview</h3>
+<h3 id="project-preview">Project preview</h3>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=mxe6Ca5yLOo">Youtube</a></li>
 </ul>
@@ -1004,16 +1006,53 @@ University.</p>
 <p>And many more.</p>
 </li>
 </ul>
-<h3 id="libraries-and-packages-used_1">Libraries and Packages used</h3>
+<hr>
+<h1 id="django-geoapp-vuejs-3">Django Geoapp + Vue.js 3</h1>
+<h3 id="project-goals_1">Project Goals</h3>
+<ul>
+<li>
+<p>Use Django admin site to import data from different sources (CSV, JSON, ...) into the database.</p>
+</li>
+<li>
+<p>Use the power of Folium to visualize data generated from Django Database on a Leaflet JS map.</p>
+</li>
+<li>
+<p>Visualize data using Folium's Simple Markers.</p>
+</li>
+<li>
+<p>Users can register for an account, login, and update their information (handled by Cookiecutter Django)</p>
+</li>
+<li>
+<p>Authenticated users can add, import, or export data using django forms.</p>
+</li>
+<li>
+<p>Use Vue.js 3 (using Vite ) and axios to fetch the data from the backend and display it in a Bootstrap Table.</p>
+</li>
+</ul>
+<h3 id="project-files_1">Project Files</h3>
+<ul>
+<li><a href="https://github.com/MoustafaShaaban/Django-Geoapp">Github</a></li>
+</ul>
+<h3 id="project-preview_1">Project Preview</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=dqDSYeppbGI">Youtube</a></li>
+</ul>
+<h3 id="libraries-and-packages-used">Libraries and Packages used</h3>
 <ul>
 <li>
 <p><a href="https://www.djangoproject.com/">Django Web Framework</a></p>
 </li>
 <li>
-<p><a href="https://django-crispy-forms.readthedocs.io/en/latest/">django-crispy-forms</a> package</p>
+<p><a href="https://django-import-export.readthedocs.io/en/latest/">django-import-export</a> package</p>
+</li>
+<li>
+<p><a href="https://python-visualization.github.io/folium/">Folium</a></p>
+</li>
+<li>
+<p><a href="https://cookiecutter-django.readthedocs.io/en/latest/index.html">Cookiecutter Django</a></p>
 </li>
 </ul>
-<h2 id="ui-components-from-the-official-bootstrap-52-website-documentation">* UI components from the official <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5.2</a> website documentation.</h2>
+<hr>
 <h1 id="django-todo-app">Django Todo App</h1>
 <p>A project built with Django web framework and Bootstrap</p>
 <h3 id="project-goals_2">Project Goals</h3>
@@ -1051,7 +1090,7 @@ University.</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=Ux8aDtOjBOY">Youtube</a></li>
 </ul>
-<h3 id="libraries-and-packages-used_2">Libraries and Packages used</h3>
+<h3 id="libraries-and-packages-used_1">Libraries and Packages used</h3>
 <ul>
 <li>
 <p><a href="https://www.djangoproject.com/">Django Web Framework</a></p>
@@ -1096,7 +1135,7 @@ University.</p>
 <p><a href="https://www.youtube.com/watch?v=ZdYvfzODhZg">Version 3 on Youtube</a></p>
 </li>
 </ul>
-<h3 id="libraries-and-packages-used_3">Libraries and Packages used</h3>
+<h3 id="libraries-and-packages-used_2">Libraries and Packages used</h3>
 <ul>
 <li>
 <p><a href="https://www.djangoproject.com/">Django Web Framework</a></p>
